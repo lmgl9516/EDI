@@ -1,12 +1,60 @@
 @extends('myLayoutViews.master')
 
 @section('styles')
+<style>
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition-property: opacity;
+}
+
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+@media all and (transform-3d), (-webkit-transform-3d) {
+    .carousel-fade .carousel-inner > .item.next,
+    .carousel-fade .carousel-inner > .item.active.right {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.prev,
+    .carousel-fade .carousel-inner > .item.active.left {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.next.left,
+    .carousel-fade .carousel-inner > .item.prev.right,
+    .carousel-fade .carousel-inner > .item.active {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+}
+</style>
 @stop
 
 @section('content')
 
-<div id="welcomeBlock" style="display:block;">
-	<div class="carousel slide" id="carousel-ipade">
+<div id="welcomeBlock" style="display:block; background-color:#000">
+	<div class="carousel slide carousel-fade" id="carousel-ipade">
         <div class="carousel-inner">
             <div class="item active">
                 <img alt="image" class="img-responsive" src="img/fotos/foto01.JPG">
@@ -17,14 +65,7 @@
             <div class="item ">
                 <img alt="image" class="img-responsive" src="img/fotos/foto03.JPG">
             </div>
-
         </div>
-        <a data-slide="prev" href="#carousel-ipade" class="left carousel-control">
-            <span class="icon-prev"></span>
-        </a>
-        <a data-slide="next" href="#carousel-ipade" class="right carousel-control">
-            <span class="icon-next"></span>
-        </a>
     </div>
 
 
@@ -79,10 +120,12 @@
 		$('#loginForm').submit(function(e)
 		{
 			if (mfValidateLogin())
+			{
 	        	e.preventDefault();
+			}
 		});
 
-		$('.carousel').carousel({pause: "false", interval: 4000 });
+		$('.carousel').carousel({pause: "false", interval: 5000 });
 
 		$('.carousel').css({'margin': 0, 'width': $(window).outerWidth(), 'height': $(window).outerHeight()});
 		$('.carousel .item').css({'position': 'fixed', 'width': '100%', 'height': '100%'});
