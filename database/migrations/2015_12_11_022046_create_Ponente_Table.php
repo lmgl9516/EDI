@@ -17,6 +17,10 @@ class CreatePonenteTable extends Migration
             $table->increments('idPonente');
             $table->integer('idEmpresa')->unsigned();
             $table->integer('idPresentacion')->unsigned();
+            $table->string('titulo', 50);
+            $table->string('nombre');
+            $table->string('apellido');
+            $table->string('detalles');
             $table->timestamps();
         });
 

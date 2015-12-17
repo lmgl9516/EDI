@@ -16,7 +16,7 @@ class CreatePatrocinioTable extends Migration
         {
             $table->increments('idpatrocinio');
             $table->integer('idEmpresa')->unsigned();
-            $table->string('descripcion');
+            $table->string('concepto');
             $table->timestamps();
         });
 

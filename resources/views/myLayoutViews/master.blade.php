@@ -8,10 +8,10 @@
         <!-- important -->
         <meta name="_token" content="{!! csrf_token() !!}"/>
 
-        <title>Segundo Encuentro de Alimentos y Bebidas</title>
+        <title>Segundo Encuentro Sector Alimentos y Bebidas</title>
         
         <!-- App icon-->
-        <link rel="shortcut icon" type="image/x-icon" href=""/>
+        <link rel="shortcut icon" type="image/x-icon" href="{{ URL::asset('img/logos/encuentro01.png') }}"/>
         
         <!-- Bootstrap -->
         <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}">

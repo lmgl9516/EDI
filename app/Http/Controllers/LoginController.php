@@ -39,6 +39,8 @@ class LoginController extends Controller
     		//user does not exist in db, create new user with incoming data
     		$dbUser = User::create(['email' => $loginForm->email, 'password' => Hash::make($loginForm->password)]);
     	}
+        
+        return redirect('/borsh');
     }
 
     public function mpAuthenticateUser(Request $loginForm)

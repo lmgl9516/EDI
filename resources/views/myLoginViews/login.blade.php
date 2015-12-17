@@ -2,26 +2,47 @@
 
 @section('styles')
 <link rel="stylesheet" href="{{ URL::asset('css/edi/style-carousel.css') }}">
+
+<style>
+.overlay 
+{ 
+  color:#fff;
+  position:absolute;
+  z-index:12;
+  top:40%;
+  left:0;
+  width:100%;
+}
+</style>
 @stop
 
 @section('content')
 
 <div id="welcomeBlock" style="display:block; background-color:#000">
+	<div class="overlay text-left">
+		<div class="row">
+			<div class="col-lg-2 col-md-2 col-sm-1 col-xs-1"></div>
+			<div class="col-lg-8 col-md-8 col-sm-10 col-xs-10">
+				<h1> SEGUNDO ENCUENTRO SECTOR ALIMENTOS Y BEBIDAS</h1>
+				<h3>Click para comenzar</h3>
+			</div>
+			<div class="col-lg-2 col-md-2 col-sm-1 col-xs-1"></div>
+		</div>		
+	</div>
+
 	<div class="carousel slide carousel-fade" id="carousel-ipade">
         <div class="carousel-inner">
             <div class="item active">
-                <img alt="image" class="img-responsive" src="img/fotos/foto01.JPG">
+                <img alt="image" class="img-responsive" src="img/fotos/foto06.JPG">
             </div>
             <div class="item">
-                <img alt="image"  class="img-responsive" src="img/fotos/foto02.JPG">
+                <img alt="image" class="img-responsive" src="img/fotos/foto02.JPG">
             </div>
-            <div class="item ">
+            <div class="item">
                 <img alt="image" class="img-responsive" src="img/fotos/foto03.JPG">
             </div>
         </div>
     </div>
-
-
 </div>
 
 <div id="loginBlock" class="middle-box text-center loginscreen animated fadeInDown" style="display:none;">
@@ -31,7 +52,8 @@
 		</h1>
 		
 		<div style="color: #FFF;">
-			<h2>Segundo Encuentro de Alimentos y Bebidas</h2>
+			<h2>Segundo Encuentro <br> Sector Alimentos y Bebidas</h2>
+			<h3>Innovación para un mercado global</h3>
 
 			<form style="color: #676a6c;" id="loginForm" class="m-t" method="POST" action="{{URL::action('LoginController@mpAuthenticateUser')}}">{{csrf_field()}}
 				<div class="form-group">
@@ -50,58 +72,5 @@
 
 @section('scripts')
 <script src="{{ URL::asset('js/edi/script-validation.js') }}"></script>
-
-<script>	
-	function mfValidateLogin()
-    {
-        var lMessageLog = new Array();
-
-        lMessageLog[0] = mfValidate(0, 'Correo', $('#emailField'));
-        lMessageLog[1] = mfValidate(1, 'Contraseña', $('#pwdField'), 'a');
-        
-        return mfGetErrorString(lMessageLog);
-    }
-
-    function mfShowLoginBlock()
-    {
-    	$('#welcomeBlock').css('display', 'none');
-    	$('#loginBlock').css('display', 'block');
-    }
-
-	$(document).ready(function()
-	{
-		$('#welcomeBlock').click(function()
-		{
-    		$(this).fadeOut(500, function()
-    		{
-				mfShowLoginBlock();
-    		});
-		});
-
-		$('#loginForm').submit(function(e)
-		{
-			if (mfValidateLogin())
-			{
-	        	e.preventDefault();
-			}
-		});
-
-		$('.carousel').carousel({pause: "false", interval: 5000 });
-
-		$('.carousel').css({'margin': 0, 'width': $(window).outerWidth(), 'height': $(window).outerHeight()});
-		$('.carousel .item').css({'position': 'fixed', 'width': '100%', 'height': '100%'});
-		
-		$('.carousel-inner div.item img').each(function() 
-		{
-			var imgSrc = $(this).attr('src');
-			$(this).parent().css({'background': 'url('+imgSrc+') center center no-repeat', '-webkit-background-size': '100% ', '-moz-background-size': '100%', '-o-background-size': '100%', 'background-size': '100%', '-webkit-background-size': 'cover', '-moz-background-size': 'cover', '-o-background-size': 'cover', 'background-size': 'cover'});
-			$(this).remove();
-		});
-
-		$(window).on('resize', function() 
-		{
-			$('.carousel').css({'width': $(window).outerWidth(), 'height': $(window).outerHeight()});
-		});
-	});
-</script>
+<script src="{{ URL::asset('js/edi/script-login.js') }}"></script>
 @stop
