@@ -10,7 +10,7 @@ use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 
-class Usuarios extends Model implements AuthenticatableContract,
+class User extends Model implements AuthenticatableContract,
                                     AuthorizableContract,
                                     CanResetPasswordContract
 {
@@ -21,14 +21,15 @@ class Usuarios extends Model implements AuthenticatableContract,
      *
      * @var string
      */
-    protected $table = 'Usuario';
+    protected $table = 'users';
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = ['username', 'email', 'avatar', 'provider_id'];
+    protected $fillable = ['email', 'password'];
+
     /**
      * The attributes excluded from the model's JSON form.
      *
