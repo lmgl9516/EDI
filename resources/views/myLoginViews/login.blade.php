@@ -13,7 +13,7 @@
 		<div style="color: #FFF;">
 			<h2>Segundo Encuentro de Alimentos y Bebidas</h2>
 
-			<form id="loginForm" class="m-t" method="POST" action="{{URL::action('LoginController@mpAuthenticateUser')}}">{{csrf_field()}}
+			<form style="color: #676a6c;" id="loginForm" class="m-t" method="POST" action="{{URL::action('LoginController@mpAuthenticateUser')}}">{{csrf_field()}}
 				<div class="form-group">
 					<input id="emailField" type="text" class="form-control" placeholder="Correo" name="email">
 				</div>

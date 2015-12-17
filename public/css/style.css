@@ -1,17 +1,28 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&lang=en");
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,300,500,700");
+
 /*
  *   Manuel's CSS
  *
-*/
-
+ */
 .btn-ipade
 {
   background-color: #8A2F88;
   border-color: #8A2F88;
-  color: #FFFFFF;
+  color: #FFF;
 }
 
+.btn-ipade:hover
+{
+  text-decoration: none;
+  background-color: #772975;
+  border-color: #772975;
+  color: #FFF !important;
+}
+/*
+ *   end of Manuel's CSS
+ *
+ */
 
 /*
  *
