@@ -9,14 +9,10 @@ function mfValidate(pTypeId, pVarName, pObject, pGender)
 		{
 			case 0:
 				if (mfIsNotValidEmail(pObject.val()))
-				{
-					pObject.addClass('failure');
 					return 'Correo electrónico inválido';
-				}
 			break;
 
 			default:
-				pObject.removeClass('failure'); //successful validation
 			return '';
 		}
 	}
@@ -27,49 +23,44 @@ function mfValidate(pTypeId, pVarName, pObject, pGender)
 	}
 }
 
-function mfIsNotValidEmail(pEmail)
-{
-    return !(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/).test(pEmail);
-}
-
 function mfGetErrorString(pErrorsArray)
 {
-	var lLength = pErrorsArray.length;
-	var lResult	= '';
+	var lLength      = pErrorsArray.length;
+	var lErrorString = '';
 
 	for (i = 0; i < lLength; i++)
 	{
 		if (pErrorsArray[i] != '' && typeof pErrorsArray[i] != 'undefined')
 		{
-			lResult = lResult + pErrorsArray[i];
+			lErrorString = lErrorString + pErrorsArray[i];
 
 			if (i != (lLength - 1))
-				lResult = lResult + "\n\n";
+				lErrorString = lErrorString + "\n\n";
 		}
 	}
 
-	return lResult;
-}
-
-function mfHandleButtonLocks(pErrorString, pButtonHandled)
-{
-	if (pErrorString != '')
+	if (lErrorString != '')
 	{
 		swal
 		({
 			title: 'Validación no exitosa',
-			text: pErrorString,   
-			confirmButtonColor: "#d0affb",
-			type: 'error',
+			text: lErrorString,   
+			confirmButtonColor: "#B79BB7",
+			type: 'error',   
 			confirmButtonText: 'Continuar'
 		});
-		return false;
+		return true;
 	}
 
-	return true;
+	return false;
 }
 
 function mfIsNotEmptyNorNullNorUndefined(pValue)
 {
 	return !(!pValue || 0 === pValue.length);
+}
+
+function mfIsNotValidEmail(pEmail)
+{
+    return !(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/).test(pEmail);
 }
