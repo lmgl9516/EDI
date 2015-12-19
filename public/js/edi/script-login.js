@@ -8,19 +8,14 @@ function mfValidateLogin()
     return mfGetErrorString(lMessageLog);
 }
 
-function mfShowLoginBlock()
-{
-	$('#welcomeBlock').css('display', 'none');
-	$('#loginBlock').css('display', 'block');
-}
-
 $(document).ready(function()
 {
 	$('#welcomeBlock').click(function()
 	{
 		$(this).fadeOut(1000, function()
 		{
-			mfShowLoginBlock();
+			$(this).css('display', 'none');
+			$('#loginBlock').css('display', 'block');
 		});
 	});
 

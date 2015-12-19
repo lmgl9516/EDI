@@ -8,14 +8,19 @@
 
 <div id="welcomeBlock" style="display:block; background-color:#000">
 	
-	<!-- <div class="overlay black-veil"></div> -->
+	<div class="overlay black-veil"></div>
 
 	<div class="overlay text-left">
 		<div class="vertical-parent">
 	     	<div class="vertical-child">
 	     		<div class="col-lg-2 col-md-2 col-sm-1 col-xs-1"></div>
 	     		<div class="col-lg-8 col-md-8 col-sm-10 col-xs-10">
-					<img class="img-responsive" src="{{ URL::asset('img/logos/encuentro-wide.png') }}" alt="Segundo Encuentro de Alimentos y Bebidas">
+					
+					<h1>Segundo Encuentro Sector Alimentos y Bebidas</h1>
+					<h3>Click para continuar</h3>
+
+
+					<!-- <img class="img-responsive" src="{{ URL::asset('img/logos/encuentro-wide.png') }}" alt="Segundo Encuentro de Alimentos y Bebidas">
 
 		     		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
 						<img class="img-responsive" src="{{ URL::asset('img/logos/ipade.png') }}" alt="IPADE Business School">
@@ -25,7 +30,7 @@
 		     		</div>
 		     		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
 						<img class="img-responsive" src="{{ URL::asset('img/logos/gs1.png') }}" alt="GS1">
-		     		</div>
+		     		</div> -->
 	     		</div>
 	     		<div class="col-lg-2 col-md-2 col-sm-1 col-xs-1"></div>
 	     	</div>
@@ -50,7 +55,7 @@
 <div id="loginBlock" class="middle-box text-center loginscreen animated fadeInDown" style="display:none;">
 	<div>
 		<h1 class="logo-name" style="padding: 0 30px 0 30px">
-			<img class="img-responsive img-circle" src="{{ URL::asset('img/logos/encuentro.png') }}" alt="Segundo Encuentro de Alimentos y Bebidas">
+			<img class="img-responsive img-circle" src="{{ URL::asset('img/logos/encuentro.png') }}" alt="Segundo Encuentro de Alimentos y Bebidas" style="box-shadow: 0px 5px 10px rgba(0,0,0,0.5);}">
 		</h1>
 		
 		<div style="color: #FFF;">
