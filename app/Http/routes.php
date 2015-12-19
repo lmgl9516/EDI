@@ -14,6 +14,9 @@ Route::group(['middleware' => 'auth'], function ()
 
 	//Patrocinadores
 	Route::get('patrocinadores', 'PatrocinioController@mpGetAllPatrocinadores');
+
+	//Plan de trabajo
+	Route::get('plan', 'TrabajoController@mpGetPlanDeTrabajo');
 });
 
 

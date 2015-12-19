@@ -18,7 +18,7 @@ $(document).ready(function()
 {
 	$('#welcomeBlock').click(function()
 	{
-		$(this).fadeOut(500, function()
+		$(this).fadeOut(1000, function()
 		{
 			mfShowLoginBlock();
 		});
@@ -32,7 +32,7 @@ $(document).ready(function()
 		}
 	});
 
-	$('.carousel').carousel({pause: "false", interval: 5000 });
+	$('.carousel').carousel({pause: "false", interval: 4000 });
 
 	$('.carousel').css({'margin': 0, 'width': $(window).outerWidth(), 'height': $(window).outerHeight()});
 	$('.carousel .item').css({'position': 'fixed', 'width': '100%', 'height': '100%'});

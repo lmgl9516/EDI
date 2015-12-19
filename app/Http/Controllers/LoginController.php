@@ -18,6 +18,9 @@ class LoginController extends Controller
 {
     public function mpShowWelcome()
     {
+        if (Auth::user())
+            return redirect()->route('home');
+
     	return view('myLoginViews.login');
     }
 
@@ -45,6 +48,9 @@ class LoginController extends Controller
 
     public function mpAuthenticateUser(Request $loginForm)
     {
+        if (Auth::user())
+            return redirect()->route('home');
+
     	//try login
     	if (Auth::attempt(['email' => $loginForm->email, 'password' => $loginForm->password]))
     	{

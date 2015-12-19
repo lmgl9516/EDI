@@ -45,7 +45,7 @@ function mfGetErrorString(pErrorsArray)
 		({
 			title: 'Validación no exitosa',
 			text: lErrorString,   
-			confirmButtonColor: "#B79BB7",
+			confirmButtonColor: "#B178BA",
 			type: 'error',   
 			confirmButtonText: 'Continuar'
 		});

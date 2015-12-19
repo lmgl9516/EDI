@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePatrocinioTable extends Migration
+class CreateOrganizadorTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,14 +12,14 @@ class CreatePatrocinioTable extends Migration
      */
     public function up()
     {
-        Schema::create('Patrocinio', function (Blueprint $table) 
+        Schema::create('Organizador', function (Blueprint $table) 
         {
-            $table->increments('idPatrocinio');
+            $table->increments('idOrganizador');
             $table->integer('idEmpresa')->unsigned();
             $table->timestamps();
         });
 
-        Schema::table('Patrocinio', function($table)
+        Schema::table('Organizador', function($table)
         {
             $table->foreign('idEmpresa')->references('idEmpresa')->on('Empresa')->onDelete('cascade');
         });
@@ -32,6 +32,6 @@ class CreatePatrocinioTable extends Migration
      */
     public function down()
     {
-        Schema::drop('Patrocinio');
+        Schema::drop('Organizador');
     }
 }

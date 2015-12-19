@@ -11,7 +11,7 @@
         <title>Segundo Encuentro Sector Alimentos y Bebidas</title>
         
         <!-- App icon-->
-        <link rel="shortcut icon" type="image/x-icon" href="{{ URL::asset('img/logos/encuentro01.png') }}"/>
+        <link rel="shortcut icon" type="image/x-icon" href="{{ URL::asset('img/logos/encuentro-favicon.png') }}"/>
         
         <!-- Bootstrap -->
         <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}">

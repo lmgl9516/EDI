@@ -7,7 +7,7 @@
  */
 .btn-ipade
 {
-  background-color: #8A2F88;
+  background-color: #81278F;
   border-color: #8A2F88;
   color: #FFF;
 }
@@ -3255,7 +3255,10 @@ a.forum-item-title:hover {
 }
 body {
   font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #266972;
+  background-image: url(../img/fondos/back04.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   font-size: 13px;
   color: #676a6c;
   overflow-x: hidden;
@@ -4314,27 +4317,27 @@ body.mini-navbar.fixed-sidebar .logo-element {
 }
 /* CONTACTS */
 .contact-box {
-  background-color: #ffffff;
-  border: 1px solid #e7eaec;
   padding: 20px;
   margin-bottom: 20px;
+  background-color: #AB4893;
+  border-top: 1px solid #AF609C;
 }
 .contact-box > a {
   color: inherit;
 }
 .contact-box.center-version {
-  border: 1px solid #e7eaec;
+  border: 1px solid #AB4893;
   padding: 0;
 }
 .contact-box.center-version > a {
   display: block;
-  background-color: #ffffff;
+  background-color: #AF609C;
   padding: 20px;
   text-align: center;
 }
 .contact-box.center-version > a img {
-  width: 80px;
-  height: 80px;
+  width: 200px;
+  height: 200px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -4343,8 +4346,8 @@ body.mini-navbar.fixed-sidebar .logo-element {
 }
 .contact-box .contact-box-footer {
   text-align: center;
-  background-color: #ffffff;
-  border-top: 1px solid #e7eaec;
+  background-color: #AB4893;
+  border-top: 1px solid #AF609C;
   padding: 15px 20px;
 }
 /* INVOICE */

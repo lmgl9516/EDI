@@ -2,32 +2,34 @@
 
 @section('styles')
 <link rel="stylesheet" href="{{ URL::asset('css/edi/style-carousel.css') }}">
-
-<style>
-.overlay 
-{ 
-  color:#fff;
-  position:absolute;
-  z-index:12;
-  top:40%;
-  left:0;
-  width:100%;
-}
-</style>
 @stop
 
 @section('content')
 
 <div id="welcomeBlock" style="display:block; background-color:#000">
+	
+	<!-- <div class="overlay black-veil"></div> -->
+
 	<div class="overlay text-left">
-		<div class="row">
-			<div class="col-lg-2 col-md-2 col-sm-1 col-xs-1"></div>
-			<div class="col-lg-8 col-md-8 col-sm-10 col-xs-10">
-				<h1> SEGUNDO ENCUENTRO SECTOR ALIMENTOS Y BEBIDAS</h1>
-				<h3>Click para comenzar</h3>
-			</div>
-			<div class="col-lg-2 col-md-2 col-sm-1 col-xs-1"></div>
-		</div>		
+		<div class="vertical-parent">
+	     	<div class="vertical-child">
+	     		<div class="col-lg-2 col-md-2 col-sm-1 col-xs-1"></div>
+	     		<div class="col-lg-8 col-md-8 col-sm-10 col-xs-10">
+					<img class="img-responsive" src="{{ URL::asset('img/logos/encuentro-wide.png') }}" alt="Segundo Encuentro de Alimentos y Bebidas">
+
+		     		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						<img class="img-responsive" src="{{ URL::asset('img/logos/ipade.png') }}" alt="IPADE Business School">
+		     		</div>
+		     		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						<img class="img-responsive" src="{{ URL::asset('img/logos/iese.png') }}" alt="IESE">
+		     		</div>
+		     		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						<img class="img-responsive" src="{{ URL::asset('img/logos/gs1.png') }}" alt="GS1">
+		     		</div>
+	     		</div>
+	     		<div class="col-lg-2 col-md-2 col-sm-1 col-xs-1"></div>
+	     	</div>
+	   	</div>	
 	</div>
 
 	<div class="carousel slide carousel-fade" id="carousel-ipade">
@@ -48,7 +50,7 @@
 <div id="loginBlock" class="middle-box text-center loginscreen animated fadeInDown" style="display:none;">
 	<div>
 		<h1 class="logo-name" style="padding: 0 30px 0 30px">
-			<img class="img-responsive img-circle" src="{{ URL::asset('img/logos/encuentro01.png') }}" alt="Segundo Encuentro de Alimentos y Bebidas">
+			<img class="img-responsive img-circle" src="{{ URL::asset('img/logos/encuentro.png') }}" alt="Segundo Encuentro de Alimentos y Bebidas">
 		</h1>
 		
 		<div style="color: #FFF;">
@@ -73,4 +75,11 @@
 @section('scripts')
 <script src="{{ URL::asset('js/edi/script-validation.js') }}"></script>
 <script src="{{ URL::asset('js/edi/script-login.js') }}"></script>
+<script>
+	$(document).ready(function()
+	{
+		$('html').css('overflow-x', 'hidden');
+		$('body').css('overflow-x', 'hidden');
+	});
+</script>
 @stop
