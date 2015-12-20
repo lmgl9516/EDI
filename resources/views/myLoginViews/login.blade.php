@@ -128,7 +128,7 @@
 		<div class="vertical-parent">
 	     	<div class="vertical-child">
 	     		<div class="col-lg-2 col-md-2 col-sm-1 col-xs-1"></div>
-	     		<div class="col-lg-8 col-md-8 col-sm-10 col-xs-10">
+	     		<div class="col-lg-8 col-md-8 col-sm-10 col-xs-10 animated fadeInLeft">
 					
 					<h1>SEGUNDO ENCUENTRO SECTOR <b> ALIMENTOS Y BEBIDAS </b></h1>
 					<h3>Click para continuar</h3>
@@ -195,6 +195,5 @@
 
 @section('scripts')
 <script src="{{ URL::asset('js/edi/script-validation.js') }}"></script>
-<script src="{{ URL::asset('js/edi/script-login.js') }}"></script>e
-
+<script src="{{ URL::asset('js/edi/script-login.js') }}"></script>
 @stop

@@ -1,13 +1,14 @@
 @extends('myLayoutViews.master')
 
 @section('styles')
+<link rel="stylesheet" href="{{ URL::asset('css/patrocinadores-style.css') }}">
 @stop
 
 @section('content')
 <div style="padding: 0 15px">
-    <div class="row wrapper border-bottom page-heading">
-        <div class="col-lg-9">
-            <h2>ORGANIZADORES</h2>
+    <div class="row wrapper page-heading" style="padding-left: 0px;">
+        <div id="title-head" class="col-lg-3" style="box-shadow: 0px 5px 10px rgba(0,0,0,0.5);">
+            <h2 style="font-weight: 500">ORGANIZADORES</h2>
         </div>
     </div>
     <div class="wrapper wrapper-content animated fadeInRight">
@@ -46,9 +47,9 @@
         </div>
     </div>
 
-    <div class="row wrapper border-bottom white-bg page-heading" style="margin-top: -40px;">
-        <div class="col-lg-9">
-            <h2>PATROCINADORES</h2>
+    <div class="row wrapper page-heading" style="padding-left: 0px">
+        <div id="title-head" class="col-lg-3" style="box-shadow: 0px 5px 10px rgba(0,0,0,0.5);">
+            <h2 style="font-weight: 500">PATROCINADORES</h2>
         </div>
     </div>
     <div class="wrapper wrapper-content animated fadeInRight">
