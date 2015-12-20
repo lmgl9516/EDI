@@ -3,24 +3,117 @@
 @section('styles')
 <link rel="stylesheet" href="{{ URL::asset('css/edi/style-carousel.css') }}">
 <style>
-	@media all and (max-width: 767px) and (min-width: 401px) {
+	@media all and (min-width: 1166px) {
+		#logos-banner
+		{
+			padding: 0 100px;
+		}
+	}
+	@media all and (max-width: 1165px) and (min-width: 768px) {
+		#logos-banner
+		{
+			padding: 0 60px;
+		}
+	}
+	@media all and (max-width: 767px) and (min-width: 700px) {
 	  .iese-banner
 	  {
-	    padding: 20px 80px;
+	    padding: 25px 65px 0 65px;
 	  }
 	  .gs1-banner
 	  {
-	    padding: 20px 100px;
+	    padding: 20px 95px 0 95px;
+	  }
+	  .ipade-banner
+	  {
+	    padding: 0px 140px 0 70px;
 	  }
 	}
-	@media all and (max-width: 400px) and (min-width: 1px) {
+	@media all and (max-width: 699px) and (min-width: 630px) {
 	  .iese-banner
 	  {
-	    padding: 20px 80px;
+	    padding: 25px 75px 0 75px;
 	  }
 	  .gs1-banner
 	  {
-	    padding: 20px 100px;
+	    padding: 15px 90px 0 90px;
+	  }
+	  .ipade-banner
+	  {
+	    padding: 0px 150px 0 75px;
+	  }
+	}
+	@media all and (max-width: 629px) and (min-width: 570px) {
+	  .iese-banner
+	  {
+	    padding: 40px 40px 0 40px;
+	  }
+	  .gs1-banner
+	  {
+	    padding: 30px 65px 0 65px;
+	  }
+	  .ipade-banner
+	  {
+	    padding: 20px 60px 0 40px;
+	  }
+	}
+	@media all and (max-width: 569px) and (min-width: 500px) {
+	  .iese-banner
+	  {
+	    padding: 25px 45px 0 45px;
+	  }
+	  .gs1-banner
+	  {
+	    padding: 16px 55px 0 55px;
+	  }
+	  .ipade-banner
+	  {
+	    padding: 0px 90px 0 50px;
+	  }
+	}
+	@media all and (max-width: 499px) and (min-width: 381px) {
+	  .iese-banner
+	  {
+	    padding: 25px 10px 0 10px;
+	  }
+	  .gs1-banner
+	  {
+	    padding: 12px 25px 0 25px;
+	  }
+	  .ipade-banner
+	  {
+	    padding: 30px 20px 0 10px;
+	  }
+	}
+
+	/*aprobado*/
+	@media all and (max-width: 380px) and (min-width: 321px) {
+	  .iese-banner
+	  {
+	    padding: 40px 10px 0 10px;
+	  }
+	  .gs1-banner
+	  {
+	    padding: 35px 35px 0 35px;
+	  }
+	  .ipade-banner
+	  {
+	    padding: 5px 30px 0 10px;
+	  }
+	}
+	/*aprobado*/
+	@media all and (max-width: 320px) and (min-width: 1px) {
+	  .iese-banner
+	  {
+	    padding: 40px 5px 0 5px;
+	  }
+	  .gs1-banner
+	  {
+	    padding: 35px 25px 0 25px;
+	  }
+	  .ipade-banner
+	  {
+	    padding: 5px 30px 0 5px;
 	  }
 	}
 </style>
@@ -41,15 +134,17 @@
 					<h3>Click para continuar</h3>
 					<br>
 					<br>
-
-	     			<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
-						<img alt="image" class="img-responsive" src="img/logos/empresas/ipade-white.png">
-					</div>
-	     			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-						<img alt="image" class="img-responsive iese-banner" src="img/logos/empresas/iese-white.png">
-					</div>
-	     			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
-						<img alt="image" class="img-responsive gs1-banner" src="img/logos/empresas/gs1-white.png">
+					
+					<div id="logos-banner">
+		     			<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+							<img alt="image" class="img-responsive ipade-banner" src="img/logos/empresas/ipade-white.png">
+						</div>
+		     			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+							<img alt="image" class="img-responsive iese-banner" src="img/logos/empresas/iese-white.png">
+						</div>
+		     			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+							<img alt="image" class="img-responsive gs1-banner" src="img/logos/empresas/gs1-white.png">
+						</div>
 					</div>
 
 	     		</div>

@@ -5,7 +5,7 @@
 
 @section('content')
 <div style="padding: 0 15px">
-    <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="row wrapper border-bottom page-heading">
         <div class="col-lg-9">
             <h2>ORGANIZADORES</h2>
         </div>
