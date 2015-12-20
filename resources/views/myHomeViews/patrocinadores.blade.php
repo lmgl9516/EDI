@@ -16,7 +16,7 @@
             @if (!is_null($organizadores))
                 @foreach ($organizadores as $organizador)
                 <div class="col-lg-{{$widthOrg}}">
-                    <div class="contact-box center-version">
+                    <div class="contact-box center-version" style="box-shadow: 5px 5px 10px rgba(0,0,0,0.5);">
 
                         <a href="#" style="color: #FFF;">
                             <img class="img-circle" style="background: #FFF;" src="{{$organizador->imagen}}">
@@ -57,7 +57,7 @@
             @if (!is_null($patrocinadores))
                 @foreach ($patrocinadores as $patrocinador)
                 <div class="col-lg-{{$widthPat}}">
-                    <div class="contact-box center-version">
+                    <div class="contact-box center-version" style="box-shadow: 5px 5px 10px rgba(0,0,0,0.5);">
 
                         <a href="#" style="color: #FFF;">
                             <img class="img-circle" style="background: #FFF;" src="{{$patrocinador->imagen}}">

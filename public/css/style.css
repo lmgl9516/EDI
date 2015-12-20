@@ -4329,18 +4329,18 @@ body.mini-navbar.fixed-sidebar .logo-element {
   padding: 20px;
   margin-bottom: 20px;
   background-color: #AB4893;
-  border-top: 1px solid #4A1F40;
+  /*border-top: 1px solid #4A1F40;*/
 }
 .contact-box > a {
   color: inherit;
 }
 .contact-box.center-version {
-  border: 1px solid #4A1F40;
+  /*border: 1px solid #4A1F40;*/
   padding: 0;
 }
 .contact-box.center-version > a {
   display: block;
-  background-image: url(../img/fondos/back06.png);
+  background-color: #8A2F88;
   background-size: 100%;
   padding: 20px;
   text-align: center;
@@ -4356,8 +4356,8 @@ body.mini-navbar.fixed-sidebar .logo-element {
 }
 .contact-box .contact-box-footer {
   text-align: center;
-  background-color: #4A1F40;
-  border-top: 1px solid #4A1F40;
+  background-color: #581D57;
+  /*border-top: 1px solid #4A1F40;*/
   padding: 15px 20px;
 }
 /* INVOICE */

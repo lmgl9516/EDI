@@ -34,7 +34,7 @@
 								<h2>Meeting</h2>
 								<p>Conference on the sales results for the previous year. Monica please examine sales trends in marketing and products. Below please find the current status of the sale.
 								</p>
-								<a href="#" class="btn btn-ipade btn-primary"> More info</a>
+								<a href="#" class="btn btn-sm btn-ipade"> More info</a>
 								<span class="vertical-date">
 									Today <br/>
 									<small>Dec 24</small>
@@ -50,7 +50,7 @@
 							<div class="vertical-timeline-content">
 								<h2>Send documents to Mike</h2>
 								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.</p>
-								<a href="#" class="btn btn-ipade btn-success"> Download document </a>
+								<a href="#" class="btn btn-sm btn-ipade"> Download document </a>
 								<span class="vertical-date">
 									Today <br/>
 									<small>Dec 24</small>
@@ -66,7 +66,7 @@
 							<div class="vertical-timeline-content">
 								<h2>Coffee Break</h2>
 								<p>Go to shop and find some products. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's. </p>
-								<a href="#" class="btn btn-ipade btn-info">Read more</a>
+								<a href="#" class="btn btn-sm btn-ipade">Read more</a>
 								<span class="vertical-date"> Yesterday <br/><small>Dec 23</small></span>
 							</div>
 						</div>
