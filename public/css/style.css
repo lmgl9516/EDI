@@ -20,6 +20,11 @@
   border-color: #772975;
   color: #FFF !important;
 }
+
+.edi-bg
+{
+  
+}
 /*
  *   end of Manuel's CSS
  *
@@ -3253,19 +3258,23 @@ a.forum-item-title:hover {
   padding: 15px 20px;
   border-bottom: 1px solid #e7eaec;
 }
+
 body {
   font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-image: url(../img/fondos/back04.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+  background-color: #266972;
   font-size: 13px;
   color: #676a6c;
   overflow-x: hidden;
 }
+
 html,
 body {
   height: 100%;
+  background: url(../img/fondos/back04.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 body.full-height-layout #wrapper,
 body.full-height-layout #page-wrapper {
@@ -4320,18 +4329,19 @@ body.mini-navbar.fixed-sidebar .logo-element {
   padding: 20px;
   margin-bottom: 20px;
   background-color: #AB4893;
-  border-top: 1px solid #AF609C;
+  border-top: 1px solid #4A1F40;
 }
 .contact-box > a {
   color: inherit;
 }
 .contact-box.center-version {
-  border: 1px solid #AB4893;
+  border: 1px solid #4A1F40;
   padding: 0;
 }
 .contact-box.center-version > a {
   display: block;
-  background-color: #AF609C;
+  background-image: url(../img/fondos/back06.png);
+  background-size: 100%;
   padding: 20px;
   text-align: center;
 }
@@ -4346,8 +4356,8 @@ body.mini-navbar.fixed-sidebar .logo-element {
 }
 .contact-box .contact-box-footer {
   text-align: center;
-  background-color: #AB4893;
-  border-top: 1px solid #AF609C;
+  background-color: #4A1F40;
+  border-top: 1px solid #4A1F40;
   padding: 15px 20px;
 }
 /* INVOICE */

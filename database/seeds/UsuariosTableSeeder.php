@@ -2,6 +2,18 @@
 
 use Illuminate\Database\Seeder;
 
+class cUser
+{
+    public $aMail;
+    public $aPassword;
+
+    public function __construct($pEmail, $pPassword) 
+    {
+        $this->aMail     = $pEmail;
+        $this->aPassword = $pPassword;
+    }
+}
+
 class UsuariosTableSeeder extends Seeder
 {
     /**
@@ -11,22 +23,17 @@ class UsuariosTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert
-        ([
-        	'email' => 'mborcast@outlook.com',
-        	'password' => bcrypt('bunny')
-        ]);
+        $usuarios = [ new cUser('mborcast@outlook.com', 'bunny'),
+                      new cUser('jimena@outlook.com', 'jimena'),
+                      new cUser('arturo@outlook.com', 'arturo')];
 
-        DB::table('users')->insert
-        ([
-            'email' => 'jimena@outlook.com',
-            'password' => bcrypt('jimena')
-        ]);
-
-        DB::table('users')->insert
-        ([
-            'email' => 'arturo@outlook.com',
-            'password' => bcrypt('arturo')
-        ]);
+        foreach ($usuarios as $usuario) 
+        { 
+            DB::table('users')->insert
+            ([
+                'email'    => $usuario->aMail,
+                'password' => bcrypt($usuario->aPassword)
+            ]);
+        }
     }
 }

@@ -2,6 +2,18 @@
 
 use Illuminate\Database\Seeder;
 
+class cCompany
+{
+    public $aName;
+    public $aLogo;
+
+    public function __construct($pName, $pLogo) 
+    {
+        $this->aName = $pName;
+        $this->aLogo = $pLogo;
+    }
+}
+
 class EmpresasTableSeeder extends Seeder
 {
     /**
@@ -11,87 +23,39 @@ class EmpresasTableSeeder extends Seeder
      */
     public function run()
     {
-        /*
-         *  AB InBev                    [01]
-         *  APEAM                       [02]
-         *  Basque Culinary Center      [03]
-         *  Bühler                      [04]
-         *  Cervecería Minerva          [05]
-         *  Cervecería Primus           [06]
-         *  CNIT                        [07]
-         *  Comercial Mexicana          [08]
-         *  ConMexico                   [09]
-         *  CRT                         [10]
-         *  Culinary Art School         [11]
-         *  Deloitte                    [12] *** Patrocinador
-         *  El Sargazo                  [13]
-         *  GS1                         [14] *** Organizador
-         *  GS1 México                  [15]
-         *  IESE                        [16] *** Organizador
-         *  International Trade Centre  [17]
-         *  IPADE                       [18] *** Organizador
-         *  Nespresso México            [19]
-         *  Quintonil                   [20]
-         *  SA                          [21] *** Patrocinador
-         */
-
-        $empresas = ['AB InBev',
-                    'APEAM',
-                    'Basque Culinary Center',
-                    'Bühler',
-                    'Cervecería Minerva',
-                    'Cervecería Primus',
-                    'CNIT',
-                    'Comercial Mexicana',
-                    'ConMexico',
-                    'CRT',
-                    'Culinary Art School',
-                    'Deloitte',
-                    'El Sargazo',
-                    'GS1',
-                    'GS1 México',
-                    'IESE',
-                    'International Trade Centre',
-                    'IPADE',
-                    'Nespresso México',
-                    'Quintonil',
-                    'SA'];
-
-        $images  = ['img/logos/ab.png',
-                    'img/logos/apeam.png',
-                    'img/logos/bcc.jpg',
-                    'img/logos/bu.png',
-                    'img/logos/minerva.png',
-                    'img/logos/primus.jpg',
-                    'img/logos/cnit.png',
-                    'img/logos/cm.png',
-                    'img/logos/conmexico.jpg',
-                    'img/logos/crt.png',
-                    'img/logos/cas.png',
-                    'img/logos/delo.png',
-                    'img/logos/sargazo.jpg',
-                    'http://placehold.it/300x300',
-                    'http://placehold.it/300x300',
-                    'http://placehold.it/300x300',
-                    'img/logos/itc.png',
-                    'http://placehold.it/300x300',
-                    'img/logos/nesp.png',
-                    'img/logos/quinto.png',
-                    'http://placehold.it/300x300'];
-
-        $index = 0;
+        $empresas = [ new cCompany('AB InBev',                   'img/logos/empresas/ab-inbev.png'),
+                      new cCompany('APEAM',                      'img/logos/empresas/apeam.png'),
+                      new cCompany('Basque Culinary Center',     'img/logos/empresas/basque-culinary-center.jpg'),
+                      new cCompany('Bühler',                     'img/logos/empresas/buhler.png'),
+                      new cCompany('Cervecería Minerva',         'img/logos/empresas/cerveceria-minerva.png'),
+                      new cCompany('Cervecería Primus',          'img/logos/empresas/cerveceria-primus.jpg'),
+                      new cCompany('CNIT',                       'img/logos/empresas/cnit.png'),
+                      new cCompany('Comercial Mexicana',         'img/logos/empresas/comercial-mexicana.png'),
+                      new cCompany('ConMexico',                  'img/logos/empresas/conmexico.jpg'),
+                      new cCompany('CRT',                        'img/logos/empresas/crt.png'),
+                      new cCompany('Culinary Art School',        'img/logos/empresas/culinary-art-school.png'),
+                      new cCompany('Deloitte',                   'img/logos/empresas/deloitte.png'),
+                      new cCompany('El Sargazo',                 'img/logos/empresas/el-sargazo.jpg'),
+                      new cCompany('GS1',                        'img/logos/empresas/gs1.png'),
+                      new cCompany('GS1 México',                 'img/logos/empresas/gs1-mexico.png'),
+                      new cCompany('IESE',                       'img/logos/empresas/iese.png'),
+                      new cCompany('International Trade Centre', 'img/logos/empresas/int-trade-centre.png'),
+                      new cCompany('IPADE',                      'img/logos/empresas/ipade.png'),
+                      new cCompany('Nespresso México',           'img/logos/empresas/nespresso.png'),
+                      new cCompany('PA',                         'img/logos/empresas/pa.png'),
+                      new cCompany('Quintonil',                  'img/logos/empresas/quintonil.png')];
 
         foreach ($empresas as $empresa) 
     	{ 
             DB::table('Empresa')->insert
             ([
-                'nombre'      => $empresa,
+                'nombre'      => $empresa->aName,
                 'descripcion' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-                'imagen'      => $images[$index++]
+                'imagen'      => $empresa->aLogo
             ]);
     	}
 
-        $patrocinadores = [12, 21];
+        $patrocinadores = [12, 20];
         $organizadores  = [14, 16, 18];
 
         foreach ($patrocinadores as $patrocinador) 

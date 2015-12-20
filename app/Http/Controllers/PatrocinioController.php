@@ -13,12 +13,12 @@ class PatrocinioController extends Controller
 {
     public function mpGetAllPatrocinadores()
     {
-    	// $patrocinadores = DB::table('Patrocinio')
-	    // 				->join('Empresa', 'Empresa.idEmpresa', '=', 'Patrocinio.idEmpresa')
-	    // 				->get();
-
-	    $patrocinadores = DB::table('Empresa')
+    	$patrocinadores = DB::table('Patrocinio')
+	    				->join('Empresa', 'Empresa.idEmpresa', '=', 'Patrocinio.idEmpresa')
 	    				->get();
+
+	    // $patrocinadores = DB::table('Empresa')
+	    // 				->get();
 
     	$organizadores = DB::table('Organizador')
 	    				->join('Empresa', 'Empresa.idEmpresa', '=', 'Organizador.idEmpresa')

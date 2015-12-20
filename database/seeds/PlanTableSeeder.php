@@ -2,6 +2,22 @@
 
 use Illuminate\Database\Seeder;
 
+class cTalk
+{
+    public $aBloque;
+    public $aHora;
+    public $aTitulo;
+    public $aDescripcion;
+
+    public function __construct($Bloque, $pHora, $pTitulo, $pDescripcion) 
+    {
+        $this->aBloque      = $pEmail;
+        $this->aHora        = $pHora;
+        $this->aTitulo      = $pTitulo;
+        $this->aDescripcion = $pDescripcion;
+    }
+}
+
 class PlanTableSeeder extends Seeder
 {
     /**
@@ -11,125 +27,33 @@ class PlanTableSeeder extends Seeder
      */
     public function run()
     {
-        // DB::table('Presentacion')->insert
-        // ([
-        //     'idBloque'    => '',
-        //     'hora'        => '8:00',
-        //     'titulo'      => 'Registro',
-        //     'descripcion' => ''
-        // ]);
+        // $presentaciones = [ new cTalk('', '08:00', 'Registro', '',),
+        //                     new cTalk('', '08:45', 'Presentación', '',),
+        //                     new cTalk('', '09:00', 'Entorno Económico', '',),
+        //                     new cTalk('', '09:40', '', '',),
+        //                     new cTalk('', '10:35', '', '',),
+        //                     new cTalk('', '11:00', '', '',),
+        //                     new cTalk('', '12:00', '', '',),
+        //                     new cTalk('', '12:30', '', '',),
+        //                     new cTalk('', '13:40', '', '',),
+        //                     new cTalk('', '15:30', '', '',),
+        //                     new cTalk('', '16:30', '', '',),
+        //                     new cTalk('', '16:55', '', '',),
+        //                     new cTalk('', '17:25', '', '',),
+        //                     new cTalk('', '18:30', '', '',),
+        //                     new cTalk('', '18:45', '', '',),
+        //                   ];
 
-        // DB::table('Presentacion')->insert
-        // ([
-        //     'idBloque'    => '5',
-        //     'hora'        => '8:45',
-        //     'titulo'      => 'Presentación',
-        //     'descripcion' => ''
-        // ]);
-
-        // DB::table('Presentacion')->insert
-        // ([
-        //     'idBloque'    => '6',
-        //     'hora'        => '9:00',
-        //     'titulo'      => '',
-        //     'descripcion' => ''
-        // ]);
-
-        // DB::table('Presentacion')->insert
-        // ([
-        //     'idBloque'    => '',
-        //     'hora'        => '9:40',
-        //     'titulo'      => 'Registro',
-        //     'descripcion' => ''
-        // ]);
-
-        // DB::table('Presentacion')->insert
-        // ([
-        //     'idBloque'    => '',
-        //     'hora'        => '10:35',
-        //     'titulo'      => 'Registro',
-        //     'descripcion' => ''
-        // ]);
-
-        // DB::table('Presentacion')->insert
-        // ([
-        //     'idBloque'    => '',
-        //     'hora'        => '11:00',
-        //     'titulo'      => 'Registro',
-        //     'descripcion' => ''
-        // ]);
-
-        // DB::table('Presentacion')->insert
-        // ([
-        //     'idBloque'    => '',
-        //     'hora'        => '12:00',
-        //     'titulo'      => 'Registro',
-        //     'descripcion' => ''
-        // ]);
-
-        // DB::table('Presentacion')->insert
-        // ([
-        //     'idBloque'    => '',
-        //     'hora'        => '12:30',
-        //     'titulo'      => 'Registro',
-        //     'descripcion' => ''
-        // ]);
-
-        // DB::table('Presentacion')->insert
-        // ([
-        //     'idBloque'    => '',
-        //     'hora'        => '13:40',
-        //     'titulo'      => 'Registro',
-        //     'descripcion' => ''
-        // ]);
-
-        // DB::table('Presentacion')->insert
-        // ([
-        //     'idBloque'    => '',
-        //     'hora'        => '15:30',
-        //     'titulo'      => 'Registro',
-        //     'descripcion' => ''
-        // ]);
-
-        // DB::table('Presentacion')->insert
-        // ([
-        //     'idBloque'    => '',
-        //     'hora'        => '16:30',
-        //     'titulo'      => 'Registro',
-        //     'descripcion' => ''
-        // ]);
-
-        // DB::table('Presentacion')->insert
-        // ([
-        //     'idBloque'    => '',
-        //     'hora'        => '16:55',
-        //     'titulo'      => 'Registro',
-        //     'descripcion' => ''
-        // ]);
-
-        // DB::table('Presentacion')->insert
-        // ([
-        //     'idBloque'    => '',
-        //     'hora'        => '17:25',
-        //     'titulo'      => 'Registro',
-        //     'descripcion' => ''
-        // ]);
-
-        // DB::table('Presentacion')->insert
-        // ([
-        //     'idBloque'    => '',
-        //     'hora'        => '18:30',
-        //     'titulo'      => 'Registro',
-        //     'descripcion' => ''
-        // ]);
-
-        // DB::table('Presentacion')->insert
-        // ([
-        //     'idBloque'    => '',
-        //     'hora'        => '18:45',
-        //     'titulo'      => 'Registro',
-        //     'descripcion' => ''
-        // ]);
+        // foreach ($presentaciones as $presentacion) 
+        // {
+        //     DB::table('Presentacion')->insert
+        //     ([
+        //         'idBloque'    => $presentaciones->aBloque,
+        //         'hora'        => $presentaciones->aHora,
+        //         'titulo'      => $presentaciones->aTitulo,
+        //         'descripcion' => $presentaciones->aDescripcion
+        //     ]);
+        // }
     }
 }
 

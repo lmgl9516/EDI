@@ -7,7 +7,7 @@
 <div style="padding: 0 15px">
     <div class="row wrapper border-bottom white-bg page-heading">
         <div class="col-lg-9">
-            <h2>Organizadores</h2>
+            <h2>ORGANIZADORES</h2>
         </div>
     </div>
     <div class="wrapper wrapper-content animated fadeInRight">
@@ -48,7 +48,7 @@
 
     <div class="row wrapper border-bottom white-bg page-heading" style="margin-top: -40px;">
         <div class="col-lg-9">
-            <h2>Patrocinadores</h2>
+            <h2>PATROCINADORES</h2>
         </div>
     </div>
     <div class="wrapper wrapper-content animated fadeInRight">
@@ -88,4 +88,3 @@
     </div>
 </div>
 @stop
-

@@ -2,10 +2,31 @@
 
 @section('styles')
 <link rel="stylesheet" href="{{ URL::asset('css/edi/style-carousel.css') }}">
+<style>
+	@media all and (max-width: 767px) and (min-width: 401px) {
+	  .iese-banner
+	  {
+	    padding: 20px 80px;
+	  }
+	  .gs1-banner
+	  {
+	    padding: 20px 100px;
+	  }
+	}
+	@media all and (max-width: 400px) and (min-width: 1px) {
+	  .iese-banner
+	  {
+	    padding: 20px 80px;
+	  }
+	  .gs1-banner
+	  {
+	    padding: 20px 100px;
+	  }
+	}
+</style>
 @stop
 
 @section('content')
-
 <div id="welcomeBlock" style="display:block; background-color:#000">
 	
 	<div class="overlay black-veil"></div>
@@ -16,21 +37,21 @@
 	     		<div class="col-lg-2 col-md-2 col-sm-1 col-xs-1"></div>
 	     		<div class="col-lg-8 col-md-8 col-sm-10 col-xs-10">
 					
-					<h1>Segundo Encuentro Sector Alimentos y Bebidas</h1>
+					<h1>SEGUNDO ENCUENTRO SECTOR <b> ALIMENTOS Y BEBIDAS </b></h1>
 					<h3>Click para continuar</h3>
+					<br>
+					<br>
 
+	     			<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+						<img alt="image" class="img-responsive" src="img/logos/empresas/ipade-white.png">
+					</div>
+	     			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+						<img alt="image" class="img-responsive iese-banner" src="img/logos/empresas/iese-white.png">
+					</div>
+	     			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+						<img alt="image" class="img-responsive gs1-banner" src="img/logos/empresas/gs1-white.png">
+					</div>
 
-					<!-- <img class="img-responsive" src="{{ URL::asset('img/logos/encuentro-wide.png') }}" alt="Segundo Encuentro de Alimentos y Bebidas">
-
-		     		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-						<img class="img-responsive" src="{{ URL::asset('img/logos/ipade.png') }}" alt="IPADE Business School">
-		     		</div>
-		     		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-						<img class="img-responsive" src="{{ URL::asset('img/logos/iese.png') }}" alt="IESE">
-		     		</div>
-		     		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-						<img class="img-responsive" src="{{ URL::asset('img/logos/gs1.png') }}" alt="GS1">
-		     		</div> -->
 	     		</div>
 	     		<div class="col-lg-2 col-md-2 col-sm-1 col-xs-1"></div>
 	     	</div>
@@ -59,12 +80,12 @@
 		</h1>
 		
 		<div style="color: #FFF;">
-			<h2>Segundo Encuentro <br> Sector Alimentos y Bebidas</h2>
-			<h3>Innovación para un mercado global</h3>
+			<h2>SEGUNDO ENCUENTRO <br> SECTOR <b> ALIMENTOS <br> Y BEBIDAS </b></h2>
+			<h3>INNOVACIÓN para un mercado global</h3>
 
 			<form style="color: #676a6c;" id="loginForm" class="m-t" method="POST" action="{{URL::action('LoginController@mpAuthenticateUser')}}">{{csrf_field()}}
 				<div class="form-group">
-					<input id="emailField" type="text" class="form-control" placeholder="Correo" name="email">
+					<input id="emailField" type="text" class="form-control" placeholder="Correo" name="email" onkeyup="this.value=this.value.toLowerCase()">
 				</div>
 				<div class="form-group">
 					<input id="pwdField" type="password" class="form-control" placeholder="Contraseña" name="password">
@@ -79,12 +100,6 @@
 
 @section('scripts')
 <script src="{{ URL::asset('js/edi/script-validation.js') }}"></script>
-<script src="{{ URL::asset('js/edi/script-login.js') }}"></script>
-<script>
-	$(document).ready(function()
-	{
-		$('html').css('overflow-x', 'hidden');
-		$('body').css('overflow-x', 'hidden');
-	});
-</script>
+<script src="{{ URL::asset('js/edi/script-login.js') }}"></script>e
+
 @stop
