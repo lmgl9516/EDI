@@ -9,7 +9,7 @@
 
 }
 </style>
-<link rel="stylesheet" href="{{ URL::asset('css/patrocinadores-style.css') }}">
+<link rel="stylesheet" href="{{ URL::asset('css/style-patrocinadores.css') }}">
 @stop
 
 @section('content')
@@ -26,7 +26,7 @@
 
 					<div id="vertical-timeline" class="vertical-container light-timeline">
 						<div class="vertical-timeline-block">
-							<div class="vertical-timeline-icon navy-bg">
+							<div class="vertical-timeline-icon navy-bg" id = "1">
 								<i class="fa fa-briefcase"></i>
 							</div>
 
@@ -118,9 +118,18 @@
 <script>
 function mpDisableConferences()
 {
-	//obtener hora actual
+	/*//obtener hora actual
+	var dato = new Date();
+	var fecha = new Date();
+	var hora = fecha.getHours();
+	var minuto = fecha.getMinutes();
 	//desabilitar coloreado de gris
-	//logica de foobar
+	if (fecha >= dato) 
+		{
+			//pintar iconos grises
+		};
+
+	//logica de foobar*/
 }
 $(document).ready(function()
 {

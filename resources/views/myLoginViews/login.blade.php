@@ -1,4 +1,4 @@
-@extends('myLayoutViews.master')
+@extends('myLayoutViews.master-login')
 
 @section('styles')
 <link rel="stylesheet" href="{{ URL::asset('css/edi/style-carousel.css') }}">

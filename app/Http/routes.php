@@ -21,10 +21,16 @@ Route::group(['middleware' => 'auth'], function ()
 
 
 
-Route::get('borsh', function()
+Route::get('register', function()
 {
     return view('myFooViews.fooLogin');
 });
+
+Route::get('foobar', function()
+{
+    return view('myFooViews.foobar');
+});
+
 Route::post('register',  'LoginController@mpInsertUserIntoDB');
 
 

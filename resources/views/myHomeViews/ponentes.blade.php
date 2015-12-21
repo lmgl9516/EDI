@@ -1,24 +1,34 @@
 @extends('myLayoutViews.master')
 
 @section('styles')
-
+    <link rel="stylesheet" href="{{ URL::asset('css/style-patrocinadores.css') }}">
+    <style>
+    .down-shadow
+    {
+        box-shadow: 0px 5px 10px rgba(0,0,0,0.5)
+    }
+    .diagonal-shadow
+    {
+        box-shadow: 5px 5px 10px rgba(0,0,0,0.5)
+    }
+</style>
 @stop
 
 @section('content')
 <div style="padding: 0 15px">
-<div class="row wrapper border-bottom white-bg page-heading">
-                <div class="col-lg-9">
-                    <h2>Ponentes</h2>
-                </div>
-</div>
+    <div class="row wrapper page-heading" style="padding-left: 0px;">
+        <div id="title-head" class="col-lg-3 down-shadow">
+            <h2 style="font-weight: 500">PONENTES</h2>
+        </div>
+    </div>
 <div class="wrapper wrapper-content animated fadeInRight">
         <div class="row">
-            <div class="col-lg-6">
-                <div class="contact-box center-version">
+            <div class="col-lg-4">
+                <div class="contact-box center-version diagonal-shadow">
 
                     <a href="profile.html">
 
-                        <img alt="image" class="img-circle" src="http://placehold.it/300x300">
+                        <img alt="image" class="img-circle diagonal-shadow" src="http://placehold.it/300x300">
 
 
                         <h3 class="m-b-xs"><strong>John Smith</strong></h3>
@@ -42,12 +52,12 @@
 
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="contact-box center-version">
+            <div class="col-lg-4">
+                <div class="contact-box center-version diagonal-shadow">
 
                     <a href="profile.html">
 
-                        <img alt="image" class="img-circle" src="http://placehold.it/300x300">
+                        <img alt="image" class="img-circle diagonal-shadow" src="http://placehold.it/300x300">
 
 
                         <h3 class="m-b-xs"><strong>Alex Johnatan</strong></h3>
@@ -71,12 +81,12 @@
 
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="contact-box center-version">
+            <div class="col-lg-4">
+                <div class="contact-box center-version diagonal-shadow">
 
                     <a href="profile.html">
 
-                        <img alt="image" class="img-circle" src="http://placehold.it/300x300">
+                        <img alt="image" class="img-circle diagonal-shadow" src="http://placehold.it/300x300">
 
 
                         <h3 class="m-b-xs"><strong>Monica Smith</strong></h3>
@@ -100,12 +110,12 @@
 
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="contact-box center-version">
+            <div class="col-lg-4">
+                <div class="contact-box center-version diagonal-shadow">
 
                     <a href="profile.html">
 
-                        <img alt="image" class="img-circle" src="http://placehold.it/300x300">
+                        <img alt="image" class="img-circle diagonal-shadow" src="http://placehold.it/300x300">
 
 
                         <h3 class="m-b-xs"><strong>Michael Zimber</strong></h3>
@@ -129,12 +139,12 @@
 
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="contact-box center-version">
+            <div class="col-lg-4">
+                <div class="contact-box center-version diagonal-shadow">
 
                     <a href="profile.html">
 
-                        <img alt="image" class="img-circle" src="http://placehold.it/300x300">
+                        <img alt="image" class="img-circle diagonal-shadow" src="http://placehold.it/300x300">
 
 
                         <h3 class="m-b-xs"><strong>Sandra Smith</strong></h3>
@@ -159,12 +169,12 @@
                 </div>
             </div>
 
-            <div class="col-lg-6">
-                <div class="contact-box center-version">
+            <div class="col-lg-4">
+                <div class="contact-box center-version diagonal-shadow">
 
                     <a href="profile.html">
 
-                        <img alt="image" class="img-circle" src="http://placehold.it/300x300">
+                        <img alt="image" class="img-circle diagonal-shadow" src="http://placehold.it/300x300">
 
 
                         <h3 class="m-b-xs"><strong>Janet Carton</strong></h3>
@@ -189,17 +199,17 @@
                 </div>
             </div>
 
-            <div class="col-lg-6">
-                <div class="contact-box center-version">
+            <div class="col-lg-4">
+                <div class="contact-box center-version diagonal-shadow">
 
                     <a href="profile.html">
 
-                        <img alt="image" class="img-circle" src="http://placehold.it/300x300">
+                        <img alt="image" class="img-circle diagonal-shadow" src="http://placehold.it/300x300">
 
 
-                        <h3 class="m-b-xs"><strong>Alex Johnatan</strong></h3>
+                        <h3 class="m-b-xs"><strong>Janet Carton</strong></h3>
 
-                        <div class="font-bold">CEO</div>
+                        <div class="font-bold">CFO</div>
                         <address class="m-t-md">
                             <strong>Twitter, Inc.</strong><br>
                             795 Folsom Ave, Suite 600<br>
@@ -219,17 +229,17 @@
                 </div>
             </div>
 
-            <div class="col-lg-6">
-                <div class="contact-box center-version">
+            <div class="col-lg-4">
+                <div class="contact-box center-version diagonal-shadow">
 
                     <a href="profile.html">
 
-                        <img alt="image" class="img-circle" src="http://placehold.it/300x300">
+                        <img alt="image" class="img-circle diagonal-shadow" src="http://placehold.it/300x300">
 
 
-                        <h3 class="m-b-xs"><strong>John Smith</strong></h3>
+                        <h3 class="m-b-xs"><strong>Janet Carton</strong></h3>
 
-                        <div class="font-bold">Graphics designer</div>
+                        <div class="font-bold">CFO</div>
                         <address class="m-t-md">
                             <strong>Twitter, Inc.</strong><br>
                             795 Folsom Ave, Suite 600<br>
@@ -248,17 +258,18 @@
 
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="contact-box center-version">
+
+            <div class="col-lg-4">
+                <div class="contact-box center-version diagonal-shadow">
 
                     <a href="profile.html">
 
-                        <img alt="image" class="img-circle" src="http://placehold.it/300x300">
+                        <img alt="image" class="img-circle diagonal-shadow" src="http://placehold.it/300x300">
 
 
-                        <h3 class="m-b-xs"><strong>John Smith</strong></h3>
+                        <h3 class="m-b-xs"><strong>Janet Carton</strong></h3>
 
-                        <div class="font-bold">Graphics designer</div>
+                        <div class="font-bold">CFO</div>
                         <address class="m-t-md">
                             <strong>Twitter, Inc.</strong><br>
                             795 Folsom Ave, Suite 600<br>
@@ -277,17 +288,18 @@
 
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="contact-box center-version">
+
+            <div class="col-lg-4">
+                <div class="contact-box center-version diagonal-shadow">
 
                     <a href="profile.html">
 
-                        <img alt="image" class="img-circle" src="http://placehold.it/300x300">
+                        <img alt="image" class="img-circle diagonal-shadow" src="http://placehold.it/300x300">
 
 
-                        <h3 class="m-b-xs"><strong>Alex Johnatan</strong></h3>
+                        <h3 class="m-b-xs"><strong>Janet Carton</strong></h3>
 
-                        <div class="font-bold">CEO</div>
+                        <div class="font-bold">CFO</div>
                         <address class="m-t-md">
                             <strong>Twitter, Inc.</strong><br>
                             795 Folsom Ave, Suite 600<br>
@@ -306,17 +318,18 @@
 
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="contact-box center-version">
+
+            <div class="col-lg-4">
+                <div class="contact-box center-version diagonal-shadow">
 
                     <a href="profile.html">
 
-                        <img alt="image" class="img-circle" src="http://placehold.it/300x300">
+                        <img alt="image" class="img-circle diagonal-shadow" src="http://placehold.it/300x300">
 
 
-                        <h3 class="m-b-xs"><strong>Monica Smith</strong></h3>
+                        <h3 class="m-b-xs"><strong>Janet Carton</strong></h3>
 
-                        <div class="font-bold">Marketing manager</div>
+                        <div class="font-bold">CFO</div>
                         <address class="m-t-md">
                             <strong>Twitter, Inc.</strong><br>
                             795 Folsom Ave, Suite 600<br>
@@ -335,17 +348,18 @@
 
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="contact-box center-version">
+
+            <div class="col-lg-4">
+                <div class="contact-box center-version diagonal-shadow">
 
                     <a href="profile.html">
 
-                        <img alt="image" class="img-circle" src="http://placehold.it/300x300">
+                        <img alt="image" class="img-circle diagonal-shadow" src="http://placehold.it/300x300">
 
 
-                        <h3 class="m-b-xs"><strong>Michael Zimber</strong></h3>
+                        <h3 class="m-b-xs"><strong>Janet Carton</strong></h3>
 
-                        <div class="font-bold">Sales manager</div>
+                        <div class="font-bold">CFO</div>
                         <address class="m-t-md">
                             <strong>Twitter, Inc.</strong><br>
                             795 Folsom Ave, Suite 600<br>

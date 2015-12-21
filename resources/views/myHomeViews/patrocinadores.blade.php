@@ -1,13 +1,24 @@
 @extends('myLayoutViews.master')
 
 @section('styles')
-<link rel="stylesheet" href="{{ URL::asset('css/patrocinadores-style.css') }}">
+<link rel="stylesheet" href="{{ URL::asset('css/style-patrocinadores.css') }}">
+<style>
+    .down-shadow
+    {
+        box-shadow: 0px 5px 10px rgba(0,0,0,0.5)
+    }
+    .diagonal-shadow
+    {
+        box-shadow: 5px 5px 10px rgba(0,0,0,0.5)
+    }
+</style>
 @stop
 
 @section('content')
+
 <div style="padding: 0 15px">
     <div class="row wrapper page-heading" style="padding-left: 0px;">
-        <div id="title-head" class="col-lg-3" style="box-shadow: 0px 5px 10px rgba(0,0,0,0.5);">
+        <div id="title-head" class="col-lg-3 down-shadow">
             <h2 style="font-weight: 500">ORGANIZADORES</h2>
         </div>
     </div>
@@ -16,10 +27,10 @@
             @if (!is_null($organizadores))
                 @foreach ($organizadores as $organizador)
                 <div class="col-lg-{{$widthOrg}}">
-                    <div class="contact-box center-version" style="box-shadow: 5px 5px 10px rgba(0,0,0,0.5);">
+                    <div class="contact-box center-version diagonal-shadow">
 
                         <a href="#" style="color: #FFF;">
-                            <img class="img-circle" style="background: #FFF;" src="{{$organizador->imagen}}">
+                            <img class="img-circle diagonal-shadow" style="background: #FFF;" src="{{$organizador->imagen}}">
 
                             <h3 class="m-b-xs"><strong>{{$organizador->nombre}}</strong></h3>
 
@@ -48,7 +59,7 @@
     </div>
 
     <div class="row wrapper page-heading" style="padding-left: 0px">
-        <div id="title-head" class="col-lg-3" style="box-shadow: 0px 5px 10px rgba(0,0,0,0.5);">
+        <div id="title-head" class="col-lg-3 down-shadow">
             <h2 style="font-weight: 500">PATROCINADORES</h2>
         </div>
     </div>
@@ -57,10 +68,10 @@
             @if (!is_null($patrocinadores))
                 @foreach ($patrocinadores as $patrocinador)
                 <div class="col-lg-{{$widthPat}}">
-                    <div class="contact-box center-version" style="box-shadow: 5px 5px 10px rgba(0,0,0,0.5);">
+                    <div class="contact-box center-version diagonal-shadow">
 
                         <a href="#" style="color: #FFF;">
-                            <img class="img-circle" style="background: #FFF;" src="{{$patrocinador->imagen}}">
+                            <img class="img-circle diagonal-shadow" style="background: #FFF;" src="{{$patrocinador->imagen}}" >
 
                             <h3 class="m-b-xs"><strong>{{$patrocinador->nombre}}</strong></h3>
 
