@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Carbon\Carbon;
 
 class cTalk
 {
@@ -27,6 +28,24 @@ class PlanTableSeeder extends Seeder
      */
     public function run()
     {
+        DB::table('Presentacion')->insert
+       ([
+           'idBloque'    => 1,
+           'hora'        => Carbon::createFromTime(9, 30, 0, 'America/Mexico_City'),
+           'titulo'      => 'Fanchat',
+           'descripcion' => 'Oh my god'
+       ]);
+
+        DB::table('Presentacion')->insert
+       ([
+           'idBloque'    => 1,
+           'hora'        => Carbon::createFromTime(19, 30, 0, 'America/Mexico_City'),
+           'titulo'      => 'Roomity',
+           'descripcion' => 'Where roomies come together'
+       ]);
+
+
+
         // $presentaciones = [ new cTalk('', '08:00', 'Registro', '',),
         //                     new cTalk('', '08:45', 'Presentación', '',),
         //                     new cTalk('', '09:00', 'Entorno Económico', '',),

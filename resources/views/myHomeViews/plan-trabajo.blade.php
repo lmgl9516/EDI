@@ -9,10 +9,12 @@
 
 }
 </style>
-<link rel="stylesheet" href="{{ URL::asset('css/style-patrocinadores.css') }}">
+<link rel="stylesheet" href="{{ URL::asset('css/edi/style-patrocinadores.css') }}">
+<link rel="stylesheet" href="{{ URL::asset('css/edi/style-navbar.css') }}">
 @stop
 
 @section('content')
+@include('myIncludeViews.sidebar')
 <div style="padding: 0 15px">
 	<div class="row wrapper page-heading" style="padding-left: 0px">
 		<div id="title-head" class="col-lg-3" style="box-shadow: 0px 5px 10px rgba(0,0,0,0.5);">
@@ -115,6 +117,7 @@
 </div>
 @stop
 @section('scripts')
+<script src="{{ URL::asset('js/edi/script-sidebar.js') }}"></script>
 <script>
 function mpDisableConferences()
 {

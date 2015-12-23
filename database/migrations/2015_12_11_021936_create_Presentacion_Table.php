@@ -16,7 +16,7 @@ class CreatePresentacionTable extends Migration
         {
             $table->increments('idPresentacion');
             $table->integer('idBloque')->unsigned();
-            $table->string('hora', 5);
+            $table->datetime('hora');
             $table->string('titulo');
             $table->string('descripcion');
             $table->timestamps();

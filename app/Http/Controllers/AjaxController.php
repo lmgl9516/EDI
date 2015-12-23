@@ -7,10 +7,13 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class HomeController extends Controller
+class AjaxController extends Controller
 {
-    public function mpShowHome()
+    public function mfCheckLogin()
     {
-    	return view('myHomeViews.home');
+    	if (Request::ajax())
+    	{
+    		return 'ajax';
+    	}
     }
 }

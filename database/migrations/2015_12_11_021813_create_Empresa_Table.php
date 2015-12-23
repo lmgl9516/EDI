@@ -16,7 +16,7 @@ class CreateEmpresaTable extends Migration
         {
             $table->increments('idEmpresa');
             $table->string('nombre');
-            $table->string('descripcion');
+            $table->text('descripcion');
             $table->string('imagen');
             $table->timestamps();
         });

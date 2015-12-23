@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Carbon\Carbon;
 
 class BloquesTableSeeder extends Seeder
 {
@@ -27,7 +28,9 @@ class BloquesTableSeeder extends Seeder
         {
         	DB::table('Bloque')->insert
         	([
-        		'nombre' => $bloque
+        		'nombre' => $bloque,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
         	]);
         }
     }

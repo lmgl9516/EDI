@@ -1,53 +1,56 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Brand</a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
+<nav class="animate a">
+	<div class="nav-header">
+		<div class="profile-details">
+			<div class="avatar">
+				<img alt="image" class="img-circle diagonal-shadow" src="http://placehold.it/300x300">
+			</div>
+			<h3>Jimena Castelán</h3>			
+    		<p>Director Coca-Cola</p>
+		</div>
+	</div>
+    <ul>
+        <li>
+            <a href="{{URL::action('MainController@mpGetHome')}}">Home <i class="fa fa-home pull-right"></i></a>
         </li>
-      </ul>
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-ipade">Submit</button>
-      </form>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
+        <li>
+            <a href="{{URL::action('MainController@mpGetOrganizersAndSponsors')}}">Patrocinadores <i class="fa fa-user pull-right"></i></a>
         </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+        <li>
+            <a href="#">Opción3 <i class="fa fa-dollar pull-right"></i></a>
+        </li>
+        <li>
+            <a href="#">Opción4 <i class="fa fa-bomb pull-right"></i></a>
+        </li>
+        <li>
+            <a href="#">Opción5 <i class="fa fa-car pull-right"></i></a>
+        </li>
+    </ul>
 </nav>
+<div class="nav-controller">
+    <span class="fa fa-bars controller-open"></span>
+    <span class="[ glyphicon glyphicon-remove ] controller-close"></span>
+</div>
+
+<!--div class="side-bar" id="side-bar">
+    <ul>
+        <li class="menu-head" id="menu-head">
+            EDI <a href="#" class="push_menu" id="push_menu"><span class="glyphicon glyphicon-align-justify pull-right"></span></a>
+        </li>
+        <div class="menu">
+            <li>
+                <a href="#">Dashboard <span class="glyphicon glyphicon-dashboard pull-right"></span></a>
+            </li>
+            <li>
+                <a href="#">Love snippet<span class="glyphicon glyphicon-heart pull-right"></span></a>
+            </li>
+            <li>
+                <a href="#">Like it? <span class="glyphicon glyphicon-star pull-right"></span></a>
+            </li>
+            <li>
+                <a href="#">Settings <span class="glyphicon glyphicon-cog pull-right"></span></a>
+            </li>
+        </div>
+        
+    </ul>
+</div--> 
+           

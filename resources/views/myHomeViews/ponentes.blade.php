@@ -1,7 +1,6 @@
 @extends('myLayoutViews.master')
 
 @section('styles')
-    <link rel="stylesheet" href="{{ URL::asset('css/style-patrocinadores.css') }}">
     <style>
     .down-shadow
     {
@@ -12,9 +11,12 @@
         box-shadow: 5px 5px 10px rgba(0,0,0,0.5)
     }
 </style>
+<link rel="stylesheet" href="{{ URL::asset('css/edi/style-navbar.css') }}">
+<link rel="stylesheet" href="{{ URL::asset('css/edi/style-patrocinadores.css') }}">
 @stop
 
 @section('content')
+@include('myIncludeViews.sidebar')
 <div style="padding: 0 15px">
     <div class="row wrapper page-heading" style="padding-left: 0px;">
         <div id="title-head" class="col-lg-3 down-shadow">
@@ -23,7 +25,7 @@
     </div>
 <div class="wrapper wrapper-content animated fadeInRight">
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-3">
                 <div class="contact-box center-version diagonal-shadow">
 
                     <a href="profile.html">
@@ -52,7 +54,7 @@
 
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-3">
                 <div class="contact-box center-version diagonal-shadow">
 
                     <a href="profile.html">
@@ -81,7 +83,7 @@
 
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-3">
                 <div class="contact-box center-version diagonal-shadow">
 
                     <a href="profile.html">
@@ -110,7 +112,7 @@
 
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-3">
                 <div class="contact-box center-version diagonal-shadow">
 
                     <a href="profile.html">
@@ -139,7 +141,7 @@
 
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-3">
                 <div class="contact-box center-version diagonal-shadow">
 
                     <a href="profile.html">
@@ -169,7 +171,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4">
+            <div class="col-lg-3">
                 <div class="contact-box center-version diagonal-shadow">
 
                     <a href="profile.html">
@@ -199,7 +201,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4">
+            <div class="col-lg-3">
                 <div class="contact-box center-version diagonal-shadow">
 
                     <a href="profile.html">
@@ -229,7 +231,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4">
+            <div class="col-lg-3">
                 <div class="contact-box center-version diagonal-shadow">
 
                     <a href="profile.html">
@@ -259,7 +261,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4">
+            <div class="col-lg-3">
                 <div class="contact-box center-version diagonal-shadow">
 
                     <a href="profile.html">
@@ -289,7 +291,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4">
+            <div class="col-lg-3">
                 <div class="contact-box center-version diagonal-shadow">
 
                     <a href="profile.html">
@@ -319,7 +321,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4">
+            <div class="col-lg-3">
                 <div class="contact-box center-version diagonal-shadow">
 
                     <a href="profile.html">
@@ -349,7 +351,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4">
+            <div class="col-lg-3">
                 <div class="contact-box center-version diagonal-shadow">
 
                     <a href="profile.html">
@@ -385,5 +387,8 @@
 </div>
 
 @stop
-   
+
+@section('scripts')
+<script src="{{ URL::asset('js/edi/script-sidebar.js') }}"></script>
+@stop
    

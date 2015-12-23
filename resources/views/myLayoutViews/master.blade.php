@@ -32,7 +32,6 @@
     </head>
 
     <body>
-        @include('myIncludeViews.sidebar')
         @yield('content')
     </body>
 
