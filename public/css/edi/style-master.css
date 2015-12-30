@@ -1,0 +1,39 @@
+/*
+IPADE solid purple  #81278F
+IPADE border purple  #8A2F88
+
+IPADE hover solid purple  #772975
+IPADE hover border purple  #772975
+
+SweetAlert purple color #B178BA
+*/
+
+/* edi-FIED BOOTSTRAP ELEMENTS */
+.form-control {
+	border-radius: 0px;
+}
+
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+    outline-color: #B178BA;
+}
+
+/* EDI elements */
+
+.btn-ipade
+{
+  background-color: #81278F;
+  border-color: #8A2F88;
+  border-radius: 0px;
+  color: #FFF;
+  width: 100%;
+}
+
+.btn-ipade:hover,
+.btn-ipade:focus
+{
+  text-decoration: none;
+  background-color: #772975;
+  border-color: #772975;
+  color: #FFF;
+}
+

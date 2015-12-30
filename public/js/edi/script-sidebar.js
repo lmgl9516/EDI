@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('nav, .nav-controller').on('click', function(event) {
+    $('nav.it, .nav-controller').on('click', function(event) {
         $('nav').toggleClass('active');
     });
 

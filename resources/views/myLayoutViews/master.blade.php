@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="edi-bg">
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -11,22 +11,22 @@
         <title>Segundo Encuentro Sector Alimentos y Bebidas</title>
         
         <!-- App icon-->
-        <link rel="shortcut icon" type="image/x-icon" href="{{ URL::asset('img/logos/encuentro-favicon.png') }}"/>
+        <link rel="shortcut icon" type="image/x-icon" href="{{ URL::asset('img/logos/encuentro-favicon.png') }}">
         
         <!-- Bootstrap -->
-        <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('css/bootstrap/bootstrap.min.css') }}">
 
         <!-- font awesome -->
-        <link rel="stylesheet" href="{{ URL::asset('font-awesome/css/font-awesome.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('css/font-awesome/font-awesome.css') }}">
 
         <!-- animations -->
         <link rel="stylesheet" href="{{ URL::asset('css/animate.css') }}">
 
         <!-- Sweet Alert -->
-        <link href="{{ URL::asset('css/plugins/sweetalert/sweetalert.css') }}" rel="stylesheet">
+        <link rel="stylesheet" href="{{ URL::asset('css/sweetalert/sweetalert.css') }}">
 
-        <!-- template css     -->
-        <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}">
+        <!-- EDI master -->
+        <link rel="stylesheet" href="{{ URL::asset('css/edi/style-master.css') }}">
 
         @yield('styles')
     </head>
@@ -39,13 +39,13 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
     <!-- jQuery-->
-    <script src="{{ URL::asset('js/jquery-2.1.1.js') }}"></script>
+    <script src="{{ URL::asset('js/jquery/jquery-2.1.1.js') }}"></script>
 
     <!-- Bootstrap-->
-    <script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ URL::asset('js/bootstrap/bootstrap.min.js') }}"></script>
     
     <!-- Sweet alert -->
-    <script src="{{ URL::asset('js/plugins/sweetalert/sweetalert.min.js') }}"></script>
+    <script src="{{ URL::asset('js/sweetalert/sweetalert.min.js') }}"></script>
 
     <!-- important -->
     <script type="text/javascript">
@@ -55,9 +55,6 @@
         });
         
     </script>
-
-    <script src="{{ URL::asset('js/plugins/metisMenu/jquery.metisMenu.js') }}"></script>
-    <script src="{{ URL::asset('js/plugins/slimscroll/jquery.slimscroll.min.js') }}"></script>
 
     @yield('scripts')
 </html>

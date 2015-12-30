@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Request;
+use Input;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -13,7 +14,8 @@ class AjaxController extends Controller
     {
     	if (Request::ajax())
     	{
-    		return 'ajax';
+            parse_str(Input::get('data'), $result); 
+    		return $result;
     	}
     }
 }

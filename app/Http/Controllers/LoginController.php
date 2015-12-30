@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
+use Request;
+use Input;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
-use Illuminate\Contracts\Auth\Guard; 
 
 use App\User;
 use DB;
 use Hash;
 use Auth;
+
+use App\ValidationManager;
 
 class LoginController extends Controller
 {
@@ -31,35 +31,34 @@ class LoginController extends Controller
         return redirect()->route('welcome');
     }
 
-    public function mpInsertUserIntoDB(Request $loginForm)
+    public function mpAuthenticateUser()
     {
-    	//look for incoming data in db
-    	$dbUser = User::where('email', '=', $loginForm->email)->first();
+        if (Request::ajax())
+        {
+            parse_str(Input::get('loginData'), $login);
+            
+            $lMessageLog = array( ValidationManager::mfValidate(0, 'Correo',     $login['email'],    'o'),
+                                  ValidationManager::mfValidate(1, 'Contraseña', $login['password'], 'a'));
 
-    	//check if user exists
-    	if (!$dbUser)
-    	{
-    		//user does not exist in db, create new user with incoming data
-    		$dbUser = User::create(['email' => $loginForm->email, 'password' => Hash::make($loginForm->password)]);
-    	}
-        
-        return redirect('/borsh');
-    }
+            $lErrorString  = ValidationManager::mfGetErrorString($lMessageLog);
 
-    public function mpAuthenticateUser(Request $loginForm)
-    {
-        if (Auth::user())
-            return redirect()->route('home');
+            if ($lErrorString)
+            {
+                //return validation errors for swal
+                return array('title' => 'Validación no exitosa', 'text' => $lErrorString, 'url' => null);
+            }
 
-    	//try login
-    	if (Auth::attempt(['email' => $loginForm->email, 'password' => $loginForm->password]))
-    	{
-    		//Authentication passed...
-    		return redirect()->route('home');
-    	}
-    	else
-    	{
-    		dd('failed auth');
-    	}
+            //try login
+            if (Auth::attempt(['email' => $login['email'], 'password' => $login['password']]))
+            {
+                //Authentication passed...
+                return array('url' => url('home'));
+            }
+            else
+            {
+                //return failure error for swal
+                return array('title' => 'Acceso denegado', 'text' => 'Correo o contraseña no autorizados.'."\n\n".'Verifique sus datos e inténtelo nuevamente.', 'url' => null);
+            }
+        }   
     }
 }
