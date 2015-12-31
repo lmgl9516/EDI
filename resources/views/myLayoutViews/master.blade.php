@@ -86,11 +86,9 @@
             </nav>
 
             <div id="content-area">
-                <div class="col-md-6 col-sm-6 col-xs-6 navbar-col">
-                    <label for="left-togglebox" id="left-hamburguer"></label>
-                </div>
-                <div class="col-md-6 col-sm-6 col-xs-6 navbar-col">
-                    <label for="right-togglebox" id="right-hamburguer"></label>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 navbar-col">
+                    <span id="left-hamburguer" class="fa fa-navicon"></span>
+                    <span id="right-hamburguer" class="fa fa-list"></span>
                 </div>
 
                 @yield('content')
@@ -116,6 +114,20 @@
            headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
         });
         
+    </script>
+
+    <script>
+        $(document).ready(function()
+        {
+            $('#left-hamburguer').click(function()
+            {
+                $('#left-togglebox').prop( "checked", true );
+            });
+            $('#right-hamburguer').click(function()
+            {
+                $('#right-togglebox').prop( "checked", true );
+            });
+        });
     </script>
 
     @yield('scripts')
