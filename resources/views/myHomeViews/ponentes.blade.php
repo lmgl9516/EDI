@@ -2,6 +2,9 @@
 
 @section('styles')
 <style>
+.container{
+  margin-bottom: 20px;
+}
 .AlphNav {
   position: fixed;
   top: 30px;
@@ -70,7 +73,7 @@ font-size:16px;
 <div class="container">
   <div class = "row">  
     <div class="col-md-7 Titulo">
-      <h2>Ponentes (Verificar el dropdown y el paginador)</h2>
+      <h2>Ponentes (Verificar el dropdown)</h2>
     </div>
   </div>
 </div>
@@ -109,8 +112,8 @@ font-size:16px;
         </div>
       </div>
     </section>
-    </div>
-    <HR>
+  </div>
+
     <div class="Ponentes">
       <section class="Contacto">
         <div class="container">
@@ -130,8 +133,8 @@ font-size:16px;
           </div>
         </div>
       </section>
-      </div>
-      <HR>
+    </div>
+
       <div class="Ponentes">
         <section class="Contacto">
           <div class="container">
@@ -151,8 +154,8 @@ font-size:16px;
             </div>
           </div>
         </section>
-        </div>
-        <HR>
+      </div>
+
           <div class="Ponentes">
             <section class="Contacto">
               <div class="container">
@@ -173,7 +176,7 @@ font-size:16px;
               </div>
             </section>
           </div>
-          <HR>
+
           <div class="Ponentes">
             <section class="Contacto">
               <div class="container">
@@ -193,28 +196,28 @@ font-size:16px;
                 </div>
               </div>
             </section>
-            </div>
-            <HR>
-            <div class="Ponentes">
-              <section class="Contacto">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-xs-6 col-md-4 text-center">
-                      <img src="http://placehold.it/200x200" class="img-rounded">
+          </div>
+
+          <div class="Ponentes">
+            <section class="Contacto">
+              <div class="container">
+                <div class="row">
+                  <div class="col-xs-6 col-md-4 text-center">
+                    <img src="http://placehold.it/200x200" class="img-rounded">
+                  </div>
+                  <div class="col-xs-6 col-md-6">
+                    <h2 class="Nombre"><strong>Zio Borges</strong></h2>
+                    <div class="col-xs-6 col-md-pull-0">
+                      <h2 class="text-justify Puesto">CEO</h2>
                     </div>
-                    <div class="col-xs-6 col-md-6">
-                      <h2 class="Nombre"><strong>Zio Borges</strong></h2>
-                      <div class="col-xs-6 col-md-pull-0">
-                        <h2 class="text-justify Puesto">CEO</h2>
-                      </div>
-                      <div class="col-xs-6 col-md-push-0">
-                        <img src="http://placehold.it/120x120" class="img-rounded">
-                      </div>
+                    <div class="col-xs-6 col-md-push-0">
+                      <img src="http://placehold.it/120x120" class="img-rounded">
                     </div>
                   </div>
                 </div>
-              </section>
-            </div>
+              </div>
+            </section>
+          </div>
 @stop
 
 @section('scripts')
