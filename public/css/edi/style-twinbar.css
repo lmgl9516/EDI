@@ -1,0 +1,367 @@
+/* -----------------
+ * -----------------
+ * -----------------
+	FIRST SECTION
+ * -----------------
+ * -----------------
+ * ----------------- */
+div#content-area{
+    position: relative;
+    width: 100%;
+    /*initial position for content*/
+    transform: translate3d(0,0,0); 
+    transition: transform 0.5s;
+}
+
+nav#left-offcanvas-menu{ /* Full screen nav menu */
+    width: 250px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    /* for browsers that don't support CSS3 translate3d */
+    visibility: hidden; 
+
+    /* fixed menu position */
+    position: fixed; 
+
+    /* shift menu -width to hide it initially */
+    transform: translate3d(-250px,0,0); 
+
+	/* include padding/ border as part of declared menu width */
+    box-sizing: border-box; 
+    background: #266972;
+    display: block;
+    text-align: center;
+    overflow: auto;
+
+    /* transition settings. */
+    transition: transform 0.5s, visibility 0s 0.5s; 
+}
+nav#right-offcanvas-menu{ /* Full screen nav menu */
+    width: 250px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    /* for browsers that don't support CSS3 translate3d */
+    visibility: hidden; 
+
+    /* fixed menu position */
+    position: fixed; 
+
+    /* shift menu -width to hide it initially */
+    transform: translate3d(250px,0,0); 
+
+	/* include padding/ border as part of declared menu width */
+    box-sizing: border-box; 
+    background: #266972;
+    display: block;
+    text-align: center;
+    overflow: auto;
+
+    /* transition settings. */
+    transition: transform 0.5s, visibility 0s 0.5s; 
+}
+
+input[type="checkbox"]#left-togglebox {
+    /* checkbox used to toggle menu state */
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* hide checkbox, we use labels to toggle it */
+    visibility: hidden;
+}
+
+input[type="checkbox"]#right-togglebox {
+    /* checkbox used to toggle menu state */
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* hide checkbox, we use labels to toggle it */
+    visibility: hidden;
+}
+
+label#left-hamburguer{ /* Main label icon to toggle menu state */
+    z-index: 9;
+    display: block;
+    position: relative;
+    font-size: 8px;
+    width: 4em;
+    height: 3.5em;
+    top: 15px;
+    left: 0;
+    text-indent: -1000px;
+    border: 0.6em solid #1F575F;
+
+    /* border color */
+    border-width: 0.8em 0;
+    cursor: pointer;
+}
+
+label#right-hamburguer{ /* Main label icon to toggle menu state */
+    z-index: 9;
+    display: block;
+    position: relative;
+    font-size: 8px;
+    width: 4em;
+    height: 3.5em;
+    top: 15px;
+    left: 0;
+    text-indent: -1000px;
+    border: 0.6em solid #1F575F;
+
+    /* border color */
+    border-width: 0.8em 0;
+    cursor: pointer;
+}
+ 
+label#left-hamburguer::before{
+    /* inner strip inside label */
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 0.8em;
+    top: 50%;
+    margin-top: -0.4em;
+    left: 0;
+    background: #1F575F; /* stripe background color. Change to match border color of parent label above */
+}
+ 
+label#right-hamburguer::before{
+    /* inner strip inside label */
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 0.8em;
+    top: 50%;
+    margin-top: -0.4em;
+    left: 0;
+    background: #1F575F; /* stripe background color. Change to match border color of parent label above */
+}
+
+input[type="checkbox"]#left-togglebox:checked ~ div#content-area{
+    transform: translate3d(250px,0,0); /* shift content area 250px to the right */
+}
+ 
+input[type="checkbox"]#left-togglebox:checked ~ nav#left-offcanvas-menu{ /* nav state when corresponding checkbox is checked */
+    transform: translate3d(0,0,0); /* shift content-area 250px to the right */
+    visibility: visible; /* this is for browsers that don't support CSS3 translate3d in showing the menu */
+    transition-delay: 0s; /* No delay for applying "visibility:visible" property when menu is going from "closed" to "open" */
+}
+
+input[type="checkbox"]#right-togglebox:checked ~ div#content-area{
+    transform: translate3d(-250px,0,0); /* shift content-area 250px to the right */
+}
+ 
+input[type="checkbox"]#right-togglebox:checked ~ nav#right-offcanvas-menu{ /* nav state when corresponding checkbox is checked */
+    transform: translate3d(0,0,0); /* shift content-area 250px to the right */
+    visibility: visible; /* this is for browsers that don't support CSS3 translate3d in showing the menu */
+    transition-delay: 0s; /* No delay for applying "visibility:visible" property when menu is going from "closed" to "open" */
+}
+
+/* -----------------
+ * -----------------
+ * -----------------
+	SECOND SECTION
+ * -----------------
+ * -----------------
+ * ----------------- */
+nav#left-offcanvas-menu label#left-close-x{ /* Large x close button inside nav */
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    text-indent: -1000px;
+    z-index: 10;
+    top: 0;
+    left: 0;
+}
+nav#right-offcanvas-menu label#right-close-x{ /* Large x close button inside nav */
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    text-indent: -1000px;
+    z-index: 10;
+    top: 0;
+    right: 0;
+}
+ 
+nav#left-offcanvas-menu label#left-close-x::before, nav label#left-close-x::after{ /* render large cross inside close button */
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    background: white;
+    top: 50%;
+    margin-top: -3px;
+    transform: rotate(-45deg);
+}
+nav#right-offcanvas-menu label#right-close-x::before, nav label#right-close-x::after{ /* render large cross inside close button */
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    background: white;
+    top: 50%;
+    margin-top: -3px;
+    transform: rotate(-45deg);
+}
+ 
+nav#left-offcanvas-menu label#left-close-x::after{ /* render large cross inside close button */
+    transform: rotate(-135deg);
+}
+nav#right-offcanvas-menu label#right-close-x::after{ /* render large cross inside close button */
+    transform: rotate(-135deg);
+}
+ 
+nav#left-offcanvas-menu a,
+nav#left-offcanvas-menu p,
+nav#left-offcanvas-menu h5{
+    text-decoration: none;
+    color: #FFF;
+    /*text-transform: uppercase;*/
+}
+
+nav#right-offcanvas-menu a,
+nav#right-offcanvas-menu p{
+    text-decoration: none;
+    color: #FFF;
+    /*text-transform: uppercase;*/
+}
+ 
+nav#left-offcanvas-menu ul{
+    list-style: none;
+    margin-top: 200px;
+    opacity: 0;
+    padding: 0;
+    position: relative;
+    font: 1.25em "Helvetica Neue"; /* use google font inside nav UL */
+    font-weight: 200;
+    transition: margin-top 0.2s 0.3s, opacity 0.5s 0.3s;
+}
+nav#right-offcanvas-menu ul{
+    list-style: none;
+    margin-top: 200px;
+    opacity: 0;
+    padding: 0;
+    position: relative;
+    font: 1.25em "Helvetica Neue"; /* use google font inside nav UL */
+    font-weight: 200;
+    transition: margin-top 0.2s 0.3s, opacity 0.5s 0.3s;
+}
+ 
+nav#left-offcanvas-menu ul li{
+    margin-bottom: 22px;
+}
+
+nav#right-offcanvas-menu ul li{
+    /*margin-bottom: 35px;*/
+    padding: 
+}
+ 
+nav#left-offcanvas-menu ul li a{
+    padding: 10px;
+    border-radius: 20px;
+}
+nav#right-offcanvas-menu ul li a{
+    padding: 10px;
+    border-radius: 20px;
+}
+ 
+nav#left-offcanvas-menu ul li a:hover{
+    background: #4C8188;
+}
+nav#right-offcanvas-menu ul li a:hover{
+    background: #4C8188;
+}
+ 
+input[type="checkbox"]#left-togglebox:checked ~ nav#left-offcanvas-menu ul{ /* nav state when corresponding checkbox is checked */
+    margin: 60px 0 0 0;
+    opacity: 1;
+}
+input[type="checkbox"]#right-togglebox:checked ~ nav#right-offcanvas-menu ul{ /* nav state when corresponding checkbox is checked */
+    margin-top: 60px;
+    opacity: 1;
+}
+
+/* -----------------
+ * -----------------
+ * -----------------
+	THIRD SECTION
+ * -----------------
+ * -----------------
+ * ----------------- */
+div.left-overlay {
+    /* overlay that covers entire page when menu is open */
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    background: black;
+    z-index: 99;
+    visibility: hidden;
+    transition: opacity 0.5s; /* transition settings */
+}
+div.right-overlay {
+    /* overlay that covers entire page when menu is open */
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    background: black;
+    z-index: 99;
+    visibility: hidden;
+    transition: opacity 0.5s; /* transition settings */
+}
+ 
+div.left-overlay label {
+    /* label of overlay that closes menu when clicked on */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+div.right-overlay label {
+    /* label of overlay that closes menu when clicked on */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+ 
+input[type="checkbox"]#left-togglebox:checked ~ div.left-overlay{ /* overlay state when corresponding checkbox is checked */
+    opacity: 0.7;
+    visibility: visible;
+}
+input[type="checkbox"]#right-togglebox:checked ~ div.right-overlay{ /* overlay state when corresponding checkbox is checked */
+    opacity: 0.7;
+    visibility: visible;
+}
+
+/* -----------------
+ * -----------------
+ * -----------------
+	FOURTH SECTION
+ * -----------------
+ * -----------------
+ * ----------------- */
+.navbar-col
+{
+	height: 60px;
+	margin-bottom: 15px;
+    background-color: #499DA9;
+}
