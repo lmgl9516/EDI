@@ -6,6 +6,9 @@ img
 {
   max-width:100%;
 }
+.container{
+    margin-bottom: 20px;
+}
 @media screen and (max-width: 700px){
 .Empresa{
 font-size:22px;
@@ -38,7 +41,7 @@ font-size:18px;
     <div class="container">
         <div class="row">
             <div class="col-xs-6 col-sm-4 text-center">
-                <img src="http://placehold.it/200x200" class="img-rounded">
+                <img src="http://placehold.it/200x200" class="img-circle">
             </div>
             <div class="col-xs-6 col-sm-6">
                 <h1 class="Empresa"><a href="#"><strong>GS1</strong></a></h1>
@@ -49,7 +52,7 @@ font-size:18px;
     <div class="container">
         <div class="row">
             <div class="col-xs-6 col-sm-4 text-center">
-                <img src="http://placehold.it/200x200" class="img-rounded">
+                <img src="http://placehold.it/200x200" class="img-circle">
             </div>
             <div class="col-xs-6 col-sm-6">
                 <h1 class="Empresa"><a href="#"><strong>GS1</strong></a></h1>
@@ -60,7 +63,7 @@ font-size:18px;
     <div class="container">
         <div class="row">
             <div class="col-xs-6 col-sm-4 text-center">
-                <img src="http://placehold.it/200x200" class="img-rounded">
+                <img src="http://placehold.it/200x200" class="img-circle">
             </div>
             <div class="col-xs-6 col-sm-6">
                 <h1 class="Empresa"><a href="#"><strong>GS1</strong></a></h1>
@@ -80,7 +83,7 @@ font-size:18px;
     <div class="container">
         <div class="row">
             <div class="col-xs-6 col-sm-4 text-center">
-                <img src="http://placehold.it/200x200" class="img-rounded">
+                <img src="http://placehold.it/200x200" class="img-circle">
             </div>
             <div class="col-xs-6 col-sm-6">
                 <h1 class="Empresa"><a href="#"><strong>GS1</strong></a></h1>
@@ -91,7 +94,7 @@ font-size:18px;
     <div class="container">
         <div class="row">
             <div class="col-xs-6 col-sm-4 text-center">
-                <img src="http://placehold.it/200x200" class="img-rounded">
+                <img src="http://placehold.it/200x200" class="img-circle">
             </div>
             <div class="col-xs-6 col-sm-6">
                 <h1 class="Empresa"><a href="#"><strong>GS1</strong></a></h1>
