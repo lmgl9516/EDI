@@ -4,8 +4,6 @@
 @stop
 
 @section('content')
-@include('myIncludeViews.sidebar')
-
 @stop
 
 @section('scripts')

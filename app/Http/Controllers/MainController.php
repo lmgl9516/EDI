@@ -54,8 +54,8 @@ class MainController extends Controller
      * ---------- PLAN TRABAJO ---------- *
      * ---------------------------------- *
      * ---------------------------------- */
-	public function mpGetWorkPlan()
-	{
-    	return view('myHomeViews.plan-trabajo');
-	}
+    public function mpGetWorkPlan()
+    {
+        return view('myHomeViews.plan-trabajo');
+    }
 }

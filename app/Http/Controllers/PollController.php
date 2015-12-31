@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
 
 class PollController extends Controller
 {
-    public function mpGetPolls()
+    public function mpGetAllPolls()
     {
     	return view('myHomeViews.myPollViews.polls');
     }

@@ -5,6 +5,17 @@ use Carbon\Carbon;
 Route::get('/',     'LoginController@mpShowWelcome')->name('welcome');
 Route::post('auth', 'LoginController@mpAuthenticateUser')->name('auth');
 
+Route::get('twinbar', function()
+{
+	return view('myIncludeViews.twinbar');
+});
+
+Route::get('pendientes', function()
+{
+	return view('to-do');
+});
+
+
 // Routes that explicitly require authentification
 Route::group(['middleware' => 'auth'], function () 
 {
@@ -13,7 +24,7 @@ Route::group(['middleware' => 'auth'], function ()
 	Route::get('home',     'MainController@mpGetHome')->name('home');
 
 	// Ponentes
-	Route::get('ponentes', 'MainController@mpGetSpeakers');
+	Route::get('ponentes', 'MainController@mpGetAllSpeakers');
 
 	//Patrocinadores
 	Route::get('empresas', 'MainController@mpGetOrganizersAndSponsors');
@@ -22,6 +33,6 @@ Route::group(['middleware' => 'auth'], function ()
 	Route::get('plan',     'MainController@mpGetWorkPlan');
 
     //Polls
-    Route::get('encuesta',          'PollController@mpGetPolls');
+    Route::get('encuesta',          'PollController@mpGetAllPolls');
     Route::get('encuesta/publicar', 'PollController@mpRegisterPoll');
 });
