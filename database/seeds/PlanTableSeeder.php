@@ -31,17 +31,143 @@ class PlanTableSeeder extends Seeder
         DB::table('Presentacion')->insert
        ([
            'idBloque'    => 1,
-           'hora'        => Carbon::createFromTime(9, 30, 0, 'America/Mexico_City'),
-           'titulo'      => 'Fanchat',
-           'descripcion' => 'Oh my god'
+           'hora'        => Carbon::createFromTime(8, 00, 0, 'America/Mexico_City'),
+           'titulo'      => 'Registro',
+           'descripcion' => ''
        ]);
 
         DB::table('Presentacion')->insert
        ([
            'idBloque'    => 1,
-           'hora'        => Carbon::createFromTime(19, 30, 0, 'America/Mexico_City'),
-           'titulo'      => 'Roomity',
-           'descripcion' => 'Where roomies come together'
+           'hora'        => Carbon::createFromTime(8, 45, 0, 'America/Mexico_City'),
+           'titulo'      => 'Presentación',
+           'descripcion' => ''
+       ]);
+
+        DB::table('Presentacion')->insert
+       ([
+           'idBloque'    => 1,
+           'hora'        => Carbon::createFromTime(9, 00, 0, 'America/Mexico_City'),
+           'titulo'      => 'Entorno Económico',
+           'descripcion' => ''
+       ]);
+
+        DB::table('Presentacion')->insert
+       ([
+           'idBloque'    => 1,
+           'hora'        => Carbon::createFromTime(9, 40, 0, 'America/Mexico_City'),
+           'titulo'      => 'Innovación en la cadena de valor: información y tecnología como elementos clave',
+           'descripcion' => ''
+       ]);
+       DB::table('Presentacion')->insert
+       ([
+           'idBloque'    => 1,
+           'hora'        => Carbon::createFromTime(9, 40, 0, 'America/Mexico_City'),
+           'titulo'      => 'Agricultura sustentable: blue number initiative',
+           'descripcion' => ''
+       ]);
+       DB::table('Presentacion')->insert
+       ([
+           'idBloque'    => 1,
+           'hora'        => Carbon::createFromTime(9, 40, 0, 'America/Mexico_City'),
+           'titulo'      => 'Información para el consumidor: tecnología y etiquetado',
+           'descripcion' => ''
+       ]);
+
+        DB::table('Presentacion')->insert
+       ([
+           'idBloque'    => 1,
+           'hora'        => Carbon::createFromTime(10, 35, 0, 'America/Mexico_City'),
+           'titulo'      => 'Receso',
+           'descripcion' => ''
+       ]);
+
+
+        DB::table('Presentacion')->insert
+       ([
+           'idBloque'    => 1,
+           'hora'        => Carbon::createFromTime(11, 00, 0, 'America/Mexico_City'),
+           'titulo'      => 'Innovación e internacionalización',
+           'descripcion' => ''
+       ]);
+        DB::table('Presentacion')->insert
+       ([
+           'idBloque'    => 1,
+           'hora'        => Carbon::createFromTime(11, 00, 0, 'America/Mexico_City'),
+           'titulo'      => 'Dos casos exitosos de exportación mexicana: Aguacate y Tequila',
+           'descripcion' => ''
+       ]);
+
+        DB::table('Presentacion')->insert
+       ([
+           'idBloque'    => 1,
+           'hora'        => Carbon::createFromTime(12, 00, 0, 'America/Mexico_City'),
+           'titulo'      => 'Receso',
+           'descripcion' => ''
+       ]);
+
+        DB::table('Presentacion')->insert
+       ([
+           'idBloque'    => 1,
+           'hora'        => Carbon::createFromTime(12, 30, 0, 'America/Mexico_City'),
+           'titulo'      => 'Innovación en la industria',
+           'descripcion' => ''
+       ]);
+
+        DB::table('Presentacion')->insert
+       ([
+           'idBloque'    => 1,
+           'hora'        => Carbon::createFromTime(13, 40, 0, 'America/Mexico_City'),
+           'titulo'      => 'Aperitivo y Comida',
+           'descripcion' => ''
+       ]);
+
+        DB::table('Presentacion')->insert
+       ([
+           'idBloque'    => 1,
+           'hora'        => Carbon::createFromTime(15, 30, 0, 'America/Mexico_City'),
+           'titulo'      => 'Cooperación entre industria y gastronomía para la innovación',
+           'descripcion' => ''
+       ]);
+
+        DB::table('Presentacion')->insert
+       ([
+           'idBloque'    => 1,
+           'hora'        => Carbon::createFromTime(16, 30, 0, 'America/Mexico_City'),
+           'titulo'      => 'Presentación de proyectos de investigación',
+           'descripcion' => ''
+       ]);
+
+        DB::table('Presentacion')->insert
+       ([
+           'idBloque'    => 1,
+           'hora'        => Carbon::createFromTime(16, 55, 0, 'America/Mexico_City'),
+           'titulo'      => 'Receso',
+           'descripcion' => ''
+       ]);
+
+        DB::table('Presentacion')->insert
+       ([
+           'idBloque'    => 1,
+           'hora'        => Carbon::createFromTime(17, 25, 0, 'America/Mexico_City'),
+           'titulo'      => 'Innovación en la experiencia del cliente',
+           'descripcion' => ''
+       ]);
+
+        DB::table('Presentacion')->insert
+       ([
+           'idBloque'    => 1,
+           'hora'        => Carbon::createFromTime(18, 30, 0, 'America/Mexico_City'),
+           'titulo'      => 'Conclusiones y despedida',
+           'descripcion' => ''
+       ]);
+
+        DB::table('Presentacion')->insert
+       ([
+           'idBloque'    => 1,
+           'hora'        => Carbon::createFromTime(18, 45, 0, 'America/Mexico_City'),
+           'titulo'      => 'Coctel de despedida',
+           'descripcion' => ''
        ]);
 
 
