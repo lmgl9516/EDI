@@ -26,7 +26,8 @@ class UsuariosTableSeeder extends Seeder
     {
         $usuarios = [ new cUser('mborcast@outlook.com', 'bunny'),
                       new cUser('jimena@outlook.com', 'jimena'),
-                      new cUser('arturo@outlook.com', 'arturo')];
+                      new cUser('arturo@outlook.com', 'arturo'),
+		      new cUser('leo@outlook.com', 'leo')];
 
         foreach ($usuarios as $usuario) 
         { 
