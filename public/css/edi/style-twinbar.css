@@ -8,7 +8,6 @@
 div#content-area{
     position: relative;
     width: 100%;
-    /*initial position for content*/
     transform: translate3d(0,0,0); 
     transition: transform 0.5s;
 }
@@ -69,7 +68,6 @@ input[type="checkbox"]#left-togglebox {
     position: absolute;
     left: 0;
     top: 0;
-    /* hide checkbox, we use labels to toggle it */
     visibility: hidden;
 }
 
@@ -78,11 +76,10 @@ input[type="checkbox"]#right-togglebox {
     position: absolute;
     left: 0;
     top: 0;
-    /* hide checkbox, we use labels to toggle it */
     visibility: hidden;
 }
 
-span#left-hamburguer{ /* Main label icon to toggle menu state */
+span#left-hamburguer{ 
     color: #1F575F;
     display: inline-block;
     position: relative;
@@ -92,13 +89,13 @@ span#left-hamburguer{ /* Main label icon to toggle menu state */
     cursor: pointer;
 }
 
-span#right-hamburguer{ /* Main label icon to toggle menu state */
+span#right-hamburguer{
     color: #1F575F;
     display: inline-block;
     position: relative;
     font-size: 40px;
     top: 11px;
-    left: 74%;
+    left: 79%;
 
     cursor: pointer;
 }
